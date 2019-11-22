@@ -1,0 +1,65 @@
+extends ./components/_layout.pug
+
+block local_vars
+  //- - var headerClass = ``
+  //- - var contentClass = ``
+  //- - var footerClass = ``
+  //- - var breadCrumbsClass = ``
+  //- - var isLogin = true
+  - var title = "Главная страница"
+
+block bread_crumbs
+
+block content
+  .container-fluid.px-0
+    .row.no-gutters
+      .col-sm-12
+        .main-slider.js-slick(data-slick="banner")
+          - for (var x = 1; x < 3; x++)
+            .main-slider__item
+              img(src='./img/banner.jpg').main-slider__img
+              .main-slider__content
+                h1.main-slider__header  Заголовок баннера
+                p.main-slider__description Краткое описание баннера <br> в две строки
+                a(href='').main-slider__btn.gradient.gradient_green: span Подробнее
+                .counter
+                  span.counter__dot
+                  span.counter__amount 1
+                  span.counter__dot
+
+    .row.no-gutters
+      .col-sm-12.advertising
+        .advertising__content
+          .advertising__item
+            img(src='./img/advertising_1.png')
+            p.advertising__text Гарантия качества всех товаров магазина!
+          .advertising__item
+            img(src='./img/advertising_2.png')
+            p.advertising__text Низкие цены!
+          .advertising__item
+            img(src='./img/persent.svg')
+            p.advertising__text Бесплатная доставка при заказе от 1000 рублей!
+
+
+
+  section.container-fluid.px-0
+    .row.no-gutters.section-header
+      .col-6
+        h2 Хит продаж
+      .col-6.text-right
+        a(href='#').btn_custom.gradient.gradient_green
+          span Все хиты
+      .col-12.section__slider
+        .slider.js-slick(data-slick="mainPage")
+          .slider__item
+            +product_card-sm()
+          .slider__item
+            +product_card-sm()
+              +label('orange') sale
+          .slider__item
+            +product_card-sm()
+                +label('green') new
+
+          - for (var x = 1; x < 9; x++)
+              .slider__item
+                +product_card-sm()
