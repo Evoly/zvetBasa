@@ -1,0 +1,72 @@
+@import './__my__vars.scss';
+
+/* text */
+$font-color: #000;
+$font-size: 16px;
+$font-size_sm: 14px;
+$font-size_xs: 12px;
+
+$link-color: #00A568;
+$link-color-hover: darken($color: #00A568, $amount: 10%);
+
+.body_global {
+  font-family: $font;
+  font-size: $font-size;
+  color: $font-color;
+  line-height: 1.357;
+
+  @include media-breakpoint-down(md) {
+    font-size: $font-size_sm;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: $font-size_xs;
+  }
+}
+
+h1, .h1 {
+
+}
+
+h2, .h2 {
+  font-size: 24px;
+  font-weight: 600;
+
+  @include media-breakpoint-down(sm) {
+  font-size: 20px;
+}
+
+
+
+}
+
+h3, .h3 {
+
+}
+
+h4, .h4 {
+
+}
+
+h5, .h5 {
+
+}
+
+h6, .h6 {
+
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+a {
+  font-size: inherit;
+  color: $link-color;
+  user-select: none;
+  // text-decoration: underline;
+  &:hover {
+    color: $link-color-hover;
+    // text-decoration: none;
+  }
+}
+/* text */

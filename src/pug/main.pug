@@ -1,0 +1,169 @@
+extends ./components/_layout.pug
+
+block local_vars
+  //- - var headerClass = ``
+  //- - var contentClass = ``
+  //- - var footerClass = ``
+  //- - var breadCrumbsClass = ``
+  //- - var isLogin = true
+  - var title = "Главная страница"
+
+block bread_crumbs
+
+block content
+  .container-fluid.px-0
+    .main-slider
+      .main-slider__nav
+        .js-slick-prev.slick-prev: span.icon_custom.ctrl
+        .js-slick-next.slick-next: span.icon_custom.ctrl
+      .js-slick.slick_init(data-slick="banner")
+        - for (var x = 1; x < 4; x++)
+            .main-slider__item
+              img(src='./img/banner.jpg').main-slider__img
+              .main-slider__content
+                h1.main-slider__header Заголовок баннера
+                .main-slider__description.hidden-sm-down Краткое описание баннера <br>в две строки
+                a(href='#').btn_custom.gradient.gradient_green
+                  span Подробнее
+                .main-slider__counter
+                  span.dot
+                  span.counter.js-counter 1
+                  span.dot
+
+    section.advertising.hidden-sm-down
+      .advertising__content
+        .advertising__item
+          img(src='./img/chek_frame.svg').advertising__img
+          p.advertising__text  Гарантия качества всех товаров магазина!
+        .advertising__item
+          img(src='./img/percent.svg').advertising__img
+          p.advertising__text  Низкие цены!
+        .advertising__item
+          img(src='./img/car.svg').advertising__img
+          p.advertising__text  Бесплатная доставка при заказе от 1000 рублей!
+
+    section.section__slider.border-bottom
+      .section__header
+        .row.no-gutters
+          .col-6
+            h2 Хит продаж
+          .col-6.text-right
+            a(href='#').btn_custom.gradient.gradient_green
+              span Все хиты
+
+      .product-slider
+        .product-slider__content
+          .product-slider__nav
+            .js-slick-prev.slick-prev: span.icon_custom.ctrl
+            .js-slick-next.slick-next: span.icon_custom.ctrl
+          .js-slick.slick-init(data-slick="product")
+            - for (var x = 1; x < 3; x++)
+              .product-slider__item
+                +product_card_sm('hit_1', true)
+                  +label('green') new
+              .product-slider__item
+                +product_card_sm('hit_2', true)
+                  +label('orange') sale
+              .product-slider__item
+                +product_card_sm('hit_3')
+                  +label('green') new
+
+    section.section__slider.border-bottom
+      .section__header
+        .row.no-gutters
+          .col-6
+            h2 Акции
+          .col-6.text-right
+            a(href='#').btn_custom.gradient.gradient_green
+              span Все акции
+
+      .product-slider
+        .product-slider__content
+          .product-slider__nav
+            .js-slick-prev.slick-prev: span.icon_custom.ctrl
+            .js-slick-next.slick-next: span.icon_custom.ctrl
+          .js-slick.slick-init(data-slick="product")
+            - for (var x = 1; x < 3; x++)
+              .product-slider__item
+                +product_card_sm('special_1', true)
+                  +label('green') new
+              .product-slider__item
+                +product_card_sm('special_2', true)
+                  +label('orange') sale
+              .product-slider__item
+                +product_card_sm('special_2')
+                  +label('green') new
+
+    section.section__slider
+      .section__header
+        .row.no-gutters
+          .col-6
+            h2 Букеты из роз
+          .col-6.text-right
+            a(href='#').btn_custom.gradient.gradient_green
+              span Все букеты из роз
+
+      .product-slider
+        .product-slider__content
+          .product-slider__nav
+            .js-slick-prev.slick-prev: span.icon_custom.ctrl
+            .js-slick-next.slick-next: span.icon_custom.ctrl
+          .js-slick.slick-init(data-slick="product")
+            - for (var x = 1; x < 3; x++)
+              .product-slider__item
+                +product_card_sm('bouquet_1', true)
+                  +label('green') new
+              .product-slider__item
+                +product_card_sm('bouquet_2', true)
+                  +label('orange') sale
+              .product-slider__item
+                +product_card_sm('bouquet_3')
+                  +label('green') new
+
+    section.section-about
+      picture.section-about_bg
+        source(srcset="./img/video_bg.jpg" media="(min-width: 321px)")
+        source(srcset="./img/video_bg_sm.jpg" media="(max-width: 320px)")
+        img(src='./img/video_bg.jpg')
+
+      .section-about__left
+        .section-about__video-wrapper
+          .section-about__poster.js-play
+            img(src='./img/poster.jpg')
+            span.icon_custom.triangle
+          .section-about__video.js-video
+            video(src="./img/coverr.mp4" controls)
+      .section-about__right
+        h2 О компании
+        p.section-about__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat erat ut lorem bibendum, sit amet convallis erat pellentesque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris ornare diam ut consectetur mollis. Nam semper tempus neque non consequat. Aliquam viverra ipsum vel risus porta rutrum. Donec eget viverra libero. #[span.hidden-md-down Mauris et mauris velit. Suspendisse luctus congue dolor vel malesuada. Sed vel ipsum dapibus, ultrices neque quis, eleifend elit. Sed eget mauris et ligula ultrices congue vitae ut ligula.]
+        .section-about__btn
+          a(href='#').btn_custom.gradient.gradient_violet: span Подробнее
+
+    section.section-news
+      .section__header
+        .row.no-gutters
+          .col-6
+            h2 Новости
+          .col-6.text-right
+            a(href='#').btn_custom.gradient.gradient_green
+              span Все новости
+
+      .row.no-gutters.section-news__content
+        .col-lg-4.col-md-6.col-12
+          +news('news_1')
+
+        .col-lg-4.col-md-6.hidden-sm-down
+          +news('news_1')
+        .col-lg-4.hidden-md-down.hidden-sm-down
+          +news('news_1')
+
+
+mixin news(imageName)
+  .news
+    img(src=`./img/${imageName}.png`).news__img
+    .news__description
+      a(href='#').news__header Открыие магазина Цвет-База.рф
+      .news__date
+        span.icon_custom.time
+        span 01.06.2017
+      .news__text С 1 июня 2017 мы открываем наш магазин. Цвет-база.рф - это магазин цветов нового формата.

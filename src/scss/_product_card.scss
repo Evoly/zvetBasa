@@ -1,0 +1,122 @@
+@import './__my__vars.scss';
+
+/* product_card */
+.product_card {
+
+}
+
+.product_card-sm {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 375px;
+  padding-bottom: 15px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+
+  &:hover {
+    height: 400px;
+
+    .product_card-sm__buy {
+      display: block;
+    }
+  }
+
+  &__content {
+    padding-top: 18px;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 1.375;
+    font-weight: 600;
+    text-align: center;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin-bottom: 10px;
+    color: inherit;
+  }
+  &__description {
+    font-size: 12px;
+    line-height: 1.333;
+    text-align: center;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin-bottom: 10px;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+
+  &__old-price,
+  &__new-price {
+    display: inline-block;
+    font-weight: 600;
+  }
+
+  &__old-price {
+    text-decoration: line-through;
+    color: $gray;
+    padding-right: 9px;
+  }
+
+  &__new-price {
+    font-size: 18px;
+    line-height: 1.39;
+    span {
+      color: $green;
+    }
+  }
+
+  &__cart {
+    padding-right: 7px;
+
+    .icon_custom {
+      font-size: 25px;
+
+      &:hover {
+        text-decoration: none;
+        transition: $ease-main;
+
+        &:before {
+          color: $red;
+        }
+      }
+    }
+
+  }
+
+  &__img {
+    max-width: 100%;
+    object-fit: cover;
+    margin-bottom: 15px;
+
+    &:hover {
+      transition: $ease-main;
+    }
+  }
+
+  &__buy {
+    display: none;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    color: $green_5;
+
+    &:hover {
+      color: $red;
+      transition: $ease-main;
+    }
+
+  }
+}
+/* product_card */

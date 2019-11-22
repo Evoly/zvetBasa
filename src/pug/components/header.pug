@@ -1,0 +1,50 @@
+.header-top_bg
+  .container-fluid.px-0
+    .header-top
+      .header-top__left
+        div
+          span.icon_custom.map
+          a(href='#').header-top__link.underline Стерлитамак
+        div.header-top__text
+          span.icon_custom.time
+          span  Работаем круглосуточно
+
+      .header-top__right
+        a(href='#'): span.icon_custom.user
+        a(href='#').header-top__link.hidden-sm-down.border-bottom_dashed  Вход
+        a(href='#').header-top__link.hidden-sm-down.border-bottom_dashed  Регистрация
+
+.container-fluid.px-0
+  .row.no-gutters.header-center
+    .col-xl-3.col-lg-3
+      a(href=('#')).header__logo: img(src='img/logo.png')
+    .col-xl-7.col-lg-7.hidden-sm-down
+      nav.nav-sm
+        a.nav-sm__item
+          span.icon_custom.pay
+          span.nav-sm__text Оплата
+        a.nav-sm__item
+          span.icon_custom.delivery
+          span.nav-sm__text Доставка
+        a.nav-sm__item
+          span.icon_custom.flower
+          span.nav-sm__text Онлайн вирина
+
+    .col-xl-2.col-lg-2.hidden-sm-down
+      .header__tel +7-987-0530-777
+      .header__tel +7-3473-303-515
+  nav.navbar.hidden-sm-down
+    ul.navbar__nav
+      -var data = ['Цветы', 'Розы', 'Букеты', 'Композиции', 'Повод', 'Подарки']
+        each val in data
+          li.navbar__item
+            a(href=('#')).navbar__link
+              span=val
+              span.icon_custom.ctrl
+        li.navbar__search
+          a(href=('#')).span.icon_custom.lens
+        li.navbar__cart
+          a(href=('#'))
+            span.icon_custom.cart
+            span.count 0
+          span.hidden-lg-down В вашей корзине пока пусто

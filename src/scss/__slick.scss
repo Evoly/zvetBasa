@@ -1,0 +1,42 @@
+@import './__my__vars.scss';
+
+/* slick */
+.slick {
+  &_init {
+    display: none;
+    &.slick-initialized {
+      display: block;
+    }
+  }
+
+}
+.slick-prev,
+.slick-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #303030;
+  cursor: pointer;
+
+  .icon_custom:before {
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: #009852;
+  }
+}
+.slick-prev {
+  .icon_custom {
+    transform: rotate(-90deg);
+  }
+}
+.slick-next {
+  .icon_custom {
+    transform: rotate(90deg);
+  }
+}
+/* slick */

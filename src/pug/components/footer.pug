@@ -1,0 +1,59 @@
+.container-fluid.px-0
+  .footer__content
+    .footer__logo
+      .footer__header
+        a(href('#')): img(src='./img/logo.png')
+      .footer__tel
+        span.icon_custom.phone-call
+        p +7-987-053-07-77
+        p +7-3473-303-515
+        p +7-987-053-07-77
+      .footer__contacts
+        span.icon_custom.map
+        span Стерлитамак, Черноморская 18
+      .footer__contacts
+        span.icon_custom.mail
+        span seller@цвет-база.рф
+      .footer__contacts
+        span.icon_custom.time
+        span Круглосуточно
+
+    .footer__col.hidden-sm-down
+      .footer__header Меню
+
+      ul.footer__list.list
+        -var data = ['О компани', 'Онлайн-Витрина', 'Новости', 'Контакты', 'Доставка', 'Оплата']
+          each val in data
+            li.list__item
+              a(href=('#')).list__link=val
+
+
+    .footer__col.hidden-sm-down
+      .footer__header Каталог
+
+      ul.footer__list.list
+        -var data = ['Цветы', 'Розы', 'Букеты', 'Композиции', 'Повод', 'Подарки']
+          each val in data
+            li.list__item
+              a(href=('#')).list__link=val
+
+    .footer__form
+      .footer__header
+        form(action="#" method="post").form-group
+          input(class="form-control" type="text" name="name" placeholder="Поиск по сайту" )
+          span.icon_custom.lens
+
+
+      .footer__absolute-block
+        .footer__social
+          span Мы в соцсетях: #[img(src='./img/social_del.png')]
+        .footer__payment
+          span Способы оплаты:
+          img(src='./img/payment.svg')
+
+
+.footer__bottom_bg
+  .container-fluid.px-0
+    .footer__bottom
+      div © 2017-2019 Интернет магазин цветов #[a(href='#') Цвет-База.рф]
+      div Разработано #[a(href='#') Digital Clouds]

@@ -1,0 +1,79 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?xyhbgo') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?xyhbgo') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?xyhbgo##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon_custom {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.check {
+  &:before {
+    content: $check;
+  }
+}
+
+.icon_custom.triangle:before {
+  content: "\e90b";
+  color: #fff;
+}
+.icon_custom.phone-call:before {
+  content: "\e90a";
+  color: #00a568;
+}
+.icon_custom.delivery:before {
+  content: "\e900";
+  color: #c3baab;
+}
+.icon_custom.pay:before {
+  content: "\e901";
+  color: #c3baab;
+}
+.icon_custom.mail:before {
+  content: "\e902";
+}
+.icon_custom.time:before {
+  content: "\e903";
+}
+.icon_custom.map:before {
+  content: "\e904";
+}
+.icon_custom.arrow_right:before {
+  content: "\e905";
+}
+.icon_custom.lens:before {
+  content: "\e906";
+  color: #fff;
+}
+.icon_custom.flower:before {
+  content: "\e907";
+  color: #c3baab;
+}
+.icon_custom.cart:before {
+  content: "\e908";
+  color: #86b662;
+}
+.icon_custom.user:before {
+  content: "\e909";
+}
+.icon_custom.ctrl:before {
+  content: "\ea50";
+}

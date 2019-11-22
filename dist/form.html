@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/png" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap" rel="stylesheet" />
+    <title>Название проекта | Главная страница</title><link rel="stylesheet" href="./css/index.min.css">
+</head>
+
+<body class="body_global">
+    <noscript>
+      <p>JavaScript is not supported in the your browser, or are disabled! Check Settings</p>
+      <p>JavaScript не поддерживается вашим браузером или отключен! Проверьте настройки браузера</p>
+    </noscript>
+    <div class="fancybox_popup -default-" id="fancybox_default" style="display:none;">
+        <div class="h1 fancybox_title">Default title</div>
+        <p class="fancybox_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam dolor ipsam recusandae. Alias, quas culpa. Fugit perferendis eveniet beatae officiis.</p>
+    </div>
+    <div class="fancybox_popup -message-" id="fancybox_message" style="display:none;">
+        <div class="h1 fancybox_title" id="fancybox_message-title">Message title</div>
+        <p class="fancybox_text" id="fancybox_message-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam dolor ipsam recusandae. Alias, quas culpa. Fugit perferendis eveniet beatae officiis.</p>
+        <div class="fancybox_message-wrapper">
+            <button class="btn_custom -primary-" type="button" id="fancybox_message-success">Принять</button>
+            <button class="btn_custom -secondary-" type="button" id="fancybox_message-reject">Отменить</button>
+        </div>
+    </div>
+    <header class="header_wrapper_global">
+        <div class="header-top_bg">
+            <div class="container-fluid px-0">
+                <div class="header-top">
+                    <div class="header-top__left">
+                        <div><span class="icon_custom map"></span><a class="header-top__link underline" href="#">Стерлитамак</a></div>
+                        <div class="header-top__text"><span class="icon_custom time"></span><span> Работаем круглосуточно</span></div>
+                    </div>
+                    <div class="header-top__right"><a href="#"><span class="icon_custom user"></span></a><a class="header-top__link hidden-sm-down border-bottom_dashed" href="#"> Вход</a><a class="header-top__link hidden-sm-down border-bottom_dashed" href="#"> Регистрация</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid px-0">
+            <div class="row no-gutters header-center">
+                <div class="col-xl-3 col-lg-3"><a class="header__logo" href="#"><img src="img/logo.png" /></a></div>
+                <div class="col-xl-7 col-lg-7 hidden-sm-down">
+                    <nav class="nav-sm"><a class="nav-sm__item"><span class="icon_custom pay"></span><span class="nav-sm__text">Оплата</span></a><a class="nav-sm__item"><span class="icon_custom delivery"></span><span class="nav-sm__text">Доставка</span></a><a class="nav-sm__item"><span class="icon_custom flower"></span><span class="nav-sm__text">Онлайн вирина</span></a></nav>
+                </div>
+                <div class="col-xl-2 col-lg-2 hidden-sm-down">
+                    <div class="header__tel">+7-987-0530-777</div>
+                    <div class="header__tel">+7-3473-303-515</div>
+                </div>
+            </div>
+            <nav class="navbar hidden-sm-down">
+                <ul class="navbar__nav">
+                    <li class="navbar__item"><a class="navbar__link" href="#"><span>Цветы</span><span class="icon_custom ctrl"></span></a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#"><span>Розы</span><span class="icon_custom ctrl"></span></a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#"><span>Букеты</span><span class="icon_custom ctrl"></span></a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#"><span>Композиции</span><span class="icon_custom ctrl"></span></a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#"><span>Повод</span><span class="icon_custom ctrl"></span></a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#"><span>Подарки</span><span class="icon_custom ctrl"></span></a></li>
+                    <li class="navbar__search"><a class="span icon_custom lens" href="#"></a></li>
+                    <li class="navbar__cart"><a href="#"><span class="icon_custom cart"></span><span class="count">0</span></a><span class="hidden-lg-down">В вашей корзине пока пусто</span></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main_wrapper_global">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <form class="form" action="./" method="get">
+                        <div class="row">
+                            <div class="col-md-6 col-xl-3">
+                                <fieldset>
+                                    <legend>Текстовое поле</legend>
+                                    <div class="form-group -default-">
+                                        <input class="form-control -default-" id="form_text_1" type="text" name="text" />
+                                        <label class="form-label" for="form_text_1">Фамилия</label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <fieldset>
+                                    <legend>Телефон</legend>
+                                    <div class="form-group -default-">
+                                        <input class="form-control -default-" id="form_text_2" type="tel" name="text" />
+                                        <label class="form-label" for="form_text_2">Телефон</label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <fieldset>
+                                    <legend>Электронная почта</legend>
+                                    <div class="form-group -default-">
+                                        <input class="form-control -default-" id="form_text_3" type="email" name="text" pattern="/[0-9]+/g" />
+                                        <label class="form-label" for="form_text_3">E-mail</label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <fieldset>
+                                    <legend>Пароль</legend>
+                                    <div class="form-group -default-">
+                                        <input class="form-control -default-" id="form_text_4" type="password" name="text" autocomplete="off" required="required" />
+                                        <label class="form-label" for="form_text_4">Пароль</label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <fieldset>
+                                    <legend>Числовое поле</legend>
+                                    <div class="form-group -default-">
+                                        <input class="form-control -default-" id="form_text_5" type="number" name="text" autocomplete="off" value="1" min="1" />
+                                        <label class="form-label" for="form_text_5">Кол-во товара</label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <fieldset>
+                                    <legend>Выпадающий список</legend>
+                                    <div class="form-group -default-">
+                                        <select class="form-control -default-" id="form_text_6" name="text">
+                                            <option value="">Номинал сертификата</option>
+                                            <option value="1">RUB 1,000.00</option>
+                                            <option value="2">RUB 2,000.00</option>
+                                            <option value="3">RUB 3,000.00</option>
+                                        </select>
+                                        <label class="form-label" for="form_text_6">Номинал сертификата</label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <fieldset>
+                                    <legend>Выбор даты</legend>
+                                    <div class="form-group -default-">
+                                        <input class="form-control -default- js-datepicker" id="form_text_7" type="text" name="text" />
+                                        <label class="form-label" for="form_text_7">Дата рождения</label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <fieldset>
+                                    <legend>Прикрепить файл (множество)</legend>
+                                    <div class="form-group -default-">
+                                        <div class="custom_item -file- -default- js-custom-file">
+                                            <input id="form_text_13" type="file" name="text" />
+                                            <label class="custom_item-label" for="form_text_13">Прикрепить файл</label>
+                                            <div class="custom_item-value">
+                                                <label for="form_text_13"><span>Название файла</span></label>
+                                                <button class="custom_item-btn icon_custom check" type="button"></button>
+                                            </div>
+                                        </div>
+                                        <label class="form-label" for="form_text_13">Резюме</label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <fieldset>
+                                    <legend>Радио и чекбокс кнопки</legend>
+                                    <div class="custom_item -checkbox- -default-">
+                                        <input id="form_text_9" type="checkbox" name="text" />
+                                        <label class="custom_item-label" for="form_text_9">Кол-во товара</label>
+                                    </div>
+                                    <hr class="hr -divider-" />
+                                    <div class="custom_item -radio- -default-">
+                                        <input id="form_text_10" type="radio" name="text" />
+                                        <label class="custom_item-label" for="form_text_10">Кол-во товара</label>
+                                    </div>
+                                    <div class="custom_item -radio- -default-">
+                                        <input id="form_text_11" type="radio" name="text" />
+                                        <label class="custom_item-label" for="form_text_11">Кол-во товара</label>
+                                    </div>
+                                    <hr class="hr -divider-" />
+                                    <div class="custom_item -file- -default- js-custom-file">
+                                        <input id="form_text_12" type="file" name="text" />
+                                        <label class="custom_item-label" for="form_text_12">Прикрепить файл</label>
+                                        <div class="custom_item-value">
+                                            <label for="form_text_12"><span>Название файла</span></label>
+                                            <button class="custom_item-btn icon_custom check" type="button"></button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit">отправить</button>
+                            </div>
+                        </div>
+                    </form>
+                    <hr class="hr -divider-" />
+                    <form class="form" action="./" method="get">
+                        <div class="row">
+                            <div class="col-md-6 col-xl-3">
+                                <fieldset>
+                                    <legend>С иконкой</legend>
+                                    <div class="form-group -default-">
+                                        <input class="form-control -default-" id="form_text_validate_1" type="text" name="text" autocomplete="off" />
+                                        <label class="form-label" for="form_text_validate_1">Текстовое поле</label><small class="form-text -icon-"><span class="icon icon_custom check"></span><span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut voluptatum unde saepe impedit repudiandae harum, consequatur cum dicta quam et.</span></small>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <fieldset>
+                                    <legend>Невалидное сообщение</legend>
+                                    <div class="form-group -default-">
+                                        <input class="form-control -default-" id="form_text_validate_2" type="text" name="text" autocomplete="off" />
+                                        <label class="form-label" for="form_text_validate_2">Текстовое поле</label><small class="form-text -invalid-"><span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut voluptatum unde saepe impedit repudiandae harum, consequatur cum dicta quam et.</span></small>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <fieldset>
+                                    <legend>Невалидное сообщение облачком</legend>
+                                    <div class="form-group -default-">
+                                        <input class="form-control -default-" id="form_text_validate_3" type="text" name="text" autocomplete="off" />
+                                        <label class="form-label" for="form_text_validate_3">Текстовое поле</label><small class="form-text -invalid_tooltip-"><span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut voluptatum unde saepe impedit repudiandae harum, consequatur cum dicta quam et.</span></small>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <fieldset>
+                                    <legend>Невалидное сообщение облачком</legend>
+                                    <div class="form-group -default-">
+                                        <input class="form-control -default-" id="form_text_validate_4" type="text" name="text" autocomplete="off" />
+                                        <label class="form-label" for="form_text_validate_4">Текстовое поле</label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer_wrapper_global">
+        <div class="container-fluid px-0">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <div class="footer__header"><a href('#')="href('#')"><img src="./img/logo.png" /></a></div>
+                    <div class="footer__tel"><span class="icon_custom phone-call"></span>
+                        <p>+7-987-053-07-77</p>
+                        <p>+7-3473-303-515</p>
+                        <p>+7-987-053-07-77</p>
+                    </div>
+                    <div class="footer__contacts"><span class="icon_custom map"></span><span>Стерлитамак, Черноморская 18</span></div>
+                    <div class="footer__contacts"><span class="icon_custom mail"></span><span>seller@цвет-база.рф</span></div>
+                    <div class="footer__contacts"><span class="icon_custom time"></span><span>Круглосуточно</span></div>
+                </div>
+                <div class="footer__col hidden-sm-down">
+                    <div class="footer__header">Меню</div>
+                    <ul class="footer__list list">
+                        <li class="list__item"><a class="list__link" href="#">О компани</a></li>
+                        <li class="list__item"><a class="list__link" href="#">Онлайн-Витрина</a></li>
+                        <li class="list__item"><a class="list__link" href="#">Новости</a></li>
+                        <li class="list__item"><a class="list__link" href="#">Контакты</a></li>
+                        <li class="list__item"><a class="list__link" href="#">Доставка</a></li>
+                        <li class="list__item"><a class="list__link" href="#">Оплата</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col hidden-sm-down">
+                    <div class="footer__header">Каталог</div>
+                    <ul class="footer__list list">
+                        <li class="list__item"><a class="list__link" href="#">Цветы</a></li>
+                        <li class="list__item"><a class="list__link" href="#">Розы</a></li>
+                        <li class="list__item"><a class="list__link" href="#">Букеты</a></li>
+                        <li class="list__item"><a class="list__link" href="#">Композиции</a></li>
+                        <li class="list__item"><a class="list__link" href="#">Повод</a></li>
+                        <li class="list__item"><a class="list__link" href="#">Подарки</a></li>
+                    </ul>
+                </div>
+                <div class="footer__form">
+                    <div class="footer__header">
+                        <form class="form-group" action="#" method="post">
+                            <input class="form-control" type="text" name="name" placeholder="Поиск по сайту" /><span class="icon_custom lens"></span>
+                        </form>
+                    </div>
+                    <div class="footer__absolute-block">
+                        <div class="footer__social"><span>Мы в соцсетях: <img src="./img/social_del.png" /></span></div>
+                        <div class="footer__payment"><span>Способы оплаты:</span><img src="./img/payment.svg" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom_bg">
+            <div class="container-fluid px-0">
+                <div class="footer__bottom">
+                    <div>© 2017-2019 Интернет магазин цветов <a href="#">Цвет-База.рф</a></div>
+                    <div>Разработано <a href="#">Digital Clouds</a></div>
+                </div>
+            </div>
+        </div>
+    </footer><script src="./js/jquery.min.js"></script><script src="./js/popper.min.js"></script><script src="./js/bootstrap.min.js"></script><script src="./js/jquery.inputmask.bundle.js"></script><script src="./js/index.min.js"></script><script src="./js/slick.min.js"></script>
+</body>
+
+</html>

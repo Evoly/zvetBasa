@@ -1,0 +1,47 @@
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1200px;
+$fullhd: 1200px;
+$mobile_max: $tablet - 1px;
+$tablet_max: $desktop - 1px;
+$desktop_max: $fullhd - 1px;
+
+$icomoon-font-path: "../fonts" !global;
+$font-path: "../fonts/";
+$font-main: Open Sans;
+$font-secondary: sans-serif;
+
+$font: $font-main, $font-secondary;
+
+//colors
+
+$gray: #BDBDBD;
+$another-gray: #F0EDE8;
+$light-gray: #c9c9c9;
+$gray_2: #777;
+$gray_3: #797979;
+$gray_4: #565656;
+$gray_5:FAFAF8;
+
+$sand: #F9F8F4;
+$dark-sand: #EFEDE4;
+
+$green: #62AB2A; //card price
+$green-text: #00A568;
+$green_1: #73B640;
+$green_2: #029E5C;
+$green_3: #009F61;
+$green_4: #0FA76C;
+$green_5: #86B662;
+
+
+$red: #F25C5C;
+$violet: #B74866;
+$rose: #F0CFD6;
+
+$brown: #856969;
+
+
+//transition
+
+$ease-main: .3s ease;

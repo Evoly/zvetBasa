@@ -1,0 +1,36 @@
+{
+  "name_project": "Название проекта",
+  "jsTemp": [
+    "jquery.min.js",
+    "popper.min.js",
+    "bootstrap.min.js",
+    "jquery.inputmask.bundle.js",
+    "index.js",
+    "slick.min.js"
+  ],
+  "js": [
+    "jquery.min.js",
+    "popper.min.js",
+    "bootstrap.min.js",
+    "jquery.inputmask.bundle.js",
+    "index.min.js",
+    "slick.min.js"
+  ],
+  "jsProd": [
+    "jquery.min.js",
+    "popper.min.js",
+    "bootstrap.min.js",
+    "jquery.inputmask.bundle.js",
+    "index.min.js",
+    "slick.min.js"
+  ],
+  "jsBundle": [
+    "bundle.min.js"
+  ],
+  "css": [
+    "index.min.css"
+  ],
+  "cssProd": [
+    "index.min.css"
+  ]
+}

@@ -1,0 +1,271 @@
+@import './__my__vars.scss';
+/* footer */
+.footer {
+  &_wrapper_global {
+    flex: 0 0 auto;
+    background-color: $sand;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 22px 14px 45px 15px;
+    @include media-breakpoint-down(md) {
+      padding-top: 10px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 20px 10px 5px;
+    }
+  }
+
+  &__col {
+    padding-left: 15px;
+    padding-right: 15px;
+    @include media-breakpoint-down(md) {
+      padding-right: 50px;
+    }
+  }
+
+  &__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 77px;
+    padding-bottom: 21px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 31px;
+    @include media-breakpoint-down(md) {
+      height: 57px;
+      align-items: flex-start;
+      padding-top: 20px;
+    }
+    @include media-breakpoint-down(sm) {
+      height: auto;
+      padding-bottom: 20px;
+      margin-bottom: 17px;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 63px;
+      height: 2px;
+      background-color: $green_1;
+    }
+  }
+
+  &__logo {
+    flex-basis: 250px;
+    box-sizing: content-box;
+    padding-right: 55px;
+    @include media-breakpoint-down(md) {
+      flex-basis: 33.33%;
+      padding-right: 135px;
+    }
+
+    .footer__header {
+      @include media-breakpoint-down(md) {
+        max-width: 187px;
+        padding-top: 5px;
+        margin-bottom: 15px;
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      flex-basis: 100%;
+      padding-right: 0;
+    }
+  }
+
+  &__form {
+    position: relative;
+    flex-basis: 371px;
+    box-sizing: content-box;
+    padding-left: 25px;
+    @include media-breakpoint-down(md) {
+      .footer__header:before {
+        content: none;
+      }
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-basis: 100%;
+    }
+    @include media-breakpoint-down(sm) {
+      display: block;
+      padding-left: 0;
+      flex-basis: 100%;
+      padding-top: 15px;
+      margin-bottom: 0;
+      padding-bottom: 10px;
+    }
+  }
+
+  &__tel {
+    position: relative;
+    padding-left: 24px;
+    color: $green_2;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+    p {
+      margin-bottom: 5px;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 0;
+      }
+    }
+
+    .phone-call {
+      position: absolute;
+      top: 5px;
+      left: 0;
+      font-size: 16px;
+    }
+  }
+
+  &__contacts {
+    font-size: 14px;
+    color: $gray_2;
+    margin-bottom: 7px;
+
+    .icon_custom {
+      font-size: 16px;
+      margin-right: 9px;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 12px;
+    }
+  }
+
+  &__bottom {
+    &_bg {
+      background-color: $dark-sand;
+    }
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    padding: 16px 17px 14px;
+    @include media-breakpoint-down(md) {
+      padding-left: 14px;
+    }
+    @include media-breakpoint-down(sm) {
+      display: block;
+      padding: 12px 1px 10px 10px;
+    }
+
+    a {
+      color: $green_1;
+
+      &:hover {
+        color: $link-color;
+      }
+    }
+  }
+
+  &__absolute-block {
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    @include media-breakpoint-down(md) {
+      left: 0;
+    }
+    @include media-breakpoint-down(xs) {
+      position: static;
+    }
+  }
+
+  &__social {
+    margin-bottom: 5px;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 15px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__payment {
+    margin-bottom: 18px;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 0;
+    }
+
+    span {
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    img {
+      display: block;
+    }
+  }
+}
+
+.list {
+  &__item {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    color: inherit;
+
+    &:hover {
+      color: $green_3;
+    }
+  }
+}
+
+.form-group {
+  width: 100%;
+  @include media-breakpoint-down(md) {
+    width: 370px;
+    max-width: 100%;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .icon_custom {
+    position: absolute;
+    right: 15px;
+    z-index: 2;
+    line-height: 34px;
+    font-size: 20px;
+
+    &:before {
+      color: #000;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    .icon_custom:before {
+      color: $green_4;
+    }
+  }
+}
+
+.form-control {
+  height: 34px;
+  border-radius: 100px;
+  border: none;
+  padding-left: 15px;
+
+  &::placeholder {
+    padding-left: 15px;
+  }
+}
+/* footer */

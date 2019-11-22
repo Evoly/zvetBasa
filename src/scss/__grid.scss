@@ -1,0 +1,44 @@
+/* Сетка проекта */
+html {
+  height: 100%;
+  display: flex;
+}
+.body_global {
+  display: flex;
+  height: auto;
+  flex: 1 0 100%;
+  max-width: 100%;
+  flex-direction: column;
+  &.-scroll_off- {
+    overflow: hidden;
+  }
+}
+
+.container-fluid {
+  @media screen and (min-width: $tablet) {
+    // 
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: $desktop;
+  }
+  @media screen and (min-width: $fullhd) {
+    max-width: $fullhd;
+  }
+}
+
+.d-xxl-none {
+  @media (min-width: $fullhd) {
+    display: none !important;
+  }
+}
+.d-xxl-block {
+  @media (min-width: $fullhd) {
+    display: block !important;
+  }
+}
+.d-xxl-flex {
+  @media (min-width: $fullhd) {
+    display: flex !important;
+  }
+}
+/* Сетка проекта */

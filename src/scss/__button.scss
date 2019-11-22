@@ -1,0 +1,213 @@
+@import './__my__vars.scss';
+
+/* buttons */
+$b-height: 29px;
+$b-height-sm: 40px;
+$b-height-xl: 90px;
+
+$b-border-radius: 60px;
+$b-font-size: 12px;
+$b-disable: 0.5;
+$b-border: 0px;
+$b-padding-v: .375rem;
+$b-padding-h: .656rem;
+
+$b-link-color: #00A568;
+$b-link-color-hover: darken($color: #00A568, $amount: 10%);
+
+$default-text: #00A568;
+$default-color: #fff;
+$default-hover-text: #fff;
+//$default-hover-color: darken($color: #2f4045, $amount: 10%);
+$default-hover-color: linear-gradient(180deg, #85B662 0%, #0FA868 100%);
+$primary-text: #fff;
+$primary-color: #C3002F;
+$primary-hover-text: #fff;
+$primary-hover-color: darken($color: #C3002F, $amount: 10%);
+// $secondary-text:
+// $secondary-color:
+// $secondary-hover-text:
+// $secondary-hover-color:
+// $success-text:
+// $success-color:
+// $success-hover-text:
+// $success-hover-color:
+// $danger-text:
+// $danger-color:
+// $danger-hover-text:
+// $danger-hover-color:
+// $warning-text:
+// $warning-color:
+// $warning-hover-text:
+// $warning-hover-color:
+// $info-text:
+// $info-color:
+// $info-hover-text:
+// $info-hover-color:
+// $light-text:
+// $light-color:
+// $light-hover-text:
+// $light-hover-color:
+// $dark-text:
+// $dark-color:
+// $dark-hover-text:
+// $dark-hover-color:
+
+$b-types: (
+  'primary',
+  // 'secondary',
+  // 'success',
+  // 'danger',
+  // 'warning',
+  // 'info',
+  // 'light',
+  // 'dark'
+);
+$b-texts: (
+  $primary-text,
+  // $secondary-text,
+  // $success-text,
+  // $danger-text,
+  // $warning-text,
+  // $info-text,
+  // $light-text,
+  // $dar-textk
+);
+$b-colors: (
+  $primary-color,
+  // $secondary-color,
+  // $success-color,
+  // $danger-color,
+  // $warning-color,
+  // $info-color,
+  // $light-color,
+  // $dark-color
+);
+$b-hover-texts: (
+  $primary-hover-text,
+  // $secondary-hover-text,
+  // $success-hover-text,
+  // $danger-hover-text,
+  // $warning-hover-text,
+  // $info-hover-text,
+  // $light-hover-text,
+  // $dark-hover-text
+);
+$b-hover-colors: (
+  $primary-hover-color,
+  // $secondary-hover-color,
+  // $success-hover-color,
+  // $danger-hover-color,
+  // $warning-hover-color,
+  // $info-hover-color,
+  // $light-hover-color,
+  // $dark-hover-color
+);
+
+// zip - перемешать списки и образовать новые
+$bs: zip($b-types, $b-texts, $b-colors, $b-hover-texts, $b-hover-colors);
+
+
+[role="button"] {
+  user-select: none;
+}
+
+.btn {
+  &_custom {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: $b-height;
+    font-size: $b-font-size;
+    border-radius: $b-border-radius;
+    padding: $b-padding-v $b-padding-h;
+    // line-height: 16px;
+    // letter-spacing: 0.15em;
+    // text-transform: uppercase;
+    // font-weight: bold;
+    border: $b-border solid $default-color;
+    background: $default-color;
+    color: $default-text;
+    text-decoration: none;
+    user-select: none;
+    &:hover {
+      border: $b-border solid $default-color;
+      background: $default-color;
+      color: $default-hover-text;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    &.disabled,
+    &:disabled {
+      opacity: $b-disable;
+      pointer-events: none;
+    }
+
+    &.-link- {
+      border: none;
+      background: rgba($color: $default-color, $alpha: 0);
+      color: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      text-decoration: underline;
+      padding: 0;
+      &:hover {
+        border: none;
+        background: rgba($color: $default-color, $alpha: 0);
+        color: inherit;
+        text-decoration: none;
+      }
+      &.-default- {
+        height: auto;
+        text-transform: none;
+        letter-spacing: normal;
+        font-weight: inherit;
+        color: $b-link-color;
+        &:hover {
+          color: $b-link-color;
+        }
+      }
+    }
+
+    @each $type, $text, $color, $hover-text, $hover-color in $bs {
+      &.-#{$type}- {
+        border: $b-border solid $color;
+        background: $color;
+        color: $text;
+        &:hover {
+          border: $b-border solid $hover-color;
+          background: $hover-color;
+          color: $hover-text;
+          text-decoration: none;
+        }
+      }
+    }
+
+    @each $type, $text, $color, $hover-text, $hover-color in $bs {
+      &.-outline-#{$type}- {
+        border: $b-border solid $color;
+        background: rgba($color: $default-color, $alpha: 0);
+        color: $color;
+        &:hover {
+          border: $b-border solid $color;
+          background: $color;
+          color: $hover-text;
+          text-decoration: none;
+        }
+      }
+    }
+
+    &.-round- {
+      border-radius: 50px;
+    }
+
+    &.-sm- {
+      height: $b-height-sm;
+    }
+    &.-xl- {
+      height: $b-height-xl;
+    }
+  }
+}
+/* buttons */
