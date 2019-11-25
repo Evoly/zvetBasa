@@ -7,7 +7,7 @@
     <meta name="format-detection" content="telephone=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="shortcut icon" href="./img/favicon.png" type="image/png" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <title>Название проекта | Список страниц</title><link rel="stylesheet" href="./css/index.min.css">
 </head>
 
@@ -32,21 +32,24 @@
         <div class="header-top_bg">
             <div class="container-fluid px-0">
                 <div class="header-top">
-                    <div class="header-top__left">
-                        <div><span class="icon_custom map"></span><a class="header-top__link underline" href="#">Стерлитамак</a></div>
-                        <div class="header-top__text"><span class="icon_custom time"></span><span> Работаем круглосуточно</span></div>
+                    <div class="row no-gutters">
+                        <div class="col-md-6 col-11 header-top__right"><a class="header-top__link" href="#"><span class="icon_custom map"></span><span class="header-top__city">Стерлитамак</span></a>
+                            <div><span class="icon_custom time"></span><span class="header-top__text"> Работаем круглосуточно</span></div>
+                        </div>
+                        <div class="col-md-6 col-1">
+                            <div class="header-top__left"><a class="header-top__link" href="#"><span class="icon_custom user"></span></a><a class="header-top__link hidden-sm-down" href="#"><span class="border-bottom_dashed"> Вход</span></a><a class="header-top__link hidden-sm-down" href="#"><span class="border-bottom_dashed"> Регистрация</span></a></div>
+                        </div>
                     </div>
-                    <div class="header-top__right"><a href="#"><span class="icon_custom user"></span></a><a class="header-top__link hidden-sm-down border-bottom_dashed" href="#"> Вход</a><a class="header-top__link hidden-sm-down border-bottom_dashed" href="#"> Регистрация</a></div>
                 </div>
             </div>
         </div>
         <div class="container-fluid px-0">
-            <div class="row no-gutters header-center">
-                <div class="col-xl-3 col-lg-3"><a class="header__logo" href="#"><img src="img/logo.png" /></a></div>
-                <div class="col-xl-7 col-lg-7 hidden-sm-down">
-                    <nav class="nav-sm"><a class="nav-sm__item"><span class="icon_custom pay"></span><span class="nav-sm__text">Оплата</span></a><a class="nav-sm__item"><span class="icon_custom delivery"></span><span class="nav-sm__text">Доставка</span></a><a class="nav-sm__item"><span class="icon_custom flower"></span><span class="nav-sm__text">Онлайн вирина</span></a></nav>
+            <div class="row no-gutters header-center row-custom">
+                <div class="col-xl-3 col-lg-3 col-md_1 col-sm-4"><a class="logo" href="#"><img src="img/logo.png" /></a></div>
+                <div class="col-xl-7 col-lg-6 col-md_2 hidden-sm-down">
+                    <nav class="nav-sm"><a class="nav-sm__item" href="#"><span class="icon_custom pay"></span><span class="nav-sm__text">Оплата</span></a><a class="nav-sm__item" href="#"><span class="icon_custom delivery"></span><span class="nav-sm__text">Доставка</span></a><a class="nav-sm__item" href="#"><span class="icon_custom flower"></span><span class="nav-sm__text">Онлайн вирина</span></a></nav>
                 </div>
-                <div class="col-xl-2 col-lg-2 hidden-sm-down">
+                <div class="col-xl-2 col-lg-3 col-md_3 hidden-sm-down">
                     <div class="header__tel">+7-987-0530-777</div>
                     <div class="header__tel">+7-3473-303-515</div>
                 </div>
@@ -59,8 +62,8 @@
                     <li class="navbar__item"><a class="navbar__link" href="#"><span>Композиции</span><span class="icon_custom ctrl"></span></a></li>
                     <li class="navbar__item"><a class="navbar__link" href="#"><span>Повод</span><span class="icon_custom ctrl"></span></a></li>
                     <li class="navbar__item"><a class="navbar__link" href="#"><span>Подарки</span><span class="icon_custom ctrl"></span></a></li>
-                    <li class="navbar__search"><a class="span icon_custom lens" href="#"></a></li>
-                    <li class="navbar__cart"><a href="#"><span class="icon_custom cart"></span><span class="count">0</span></a><span class="hidden-lg-down">В вашей корзине пока пусто</span></li>
+                    <li class="navbar__search"><a href=""><span class="icon_custom lens"></span></a></li>
+                    <li class="navbar__cart"><a href=""><span class="icon-block"><span class="icon_custom cart"></span><span class="counter">0</span></span><span class="hidden-md-down">В вашей корзине пока пусто</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -77,59 +80,68 @@
         </div>
     </main>
     <footer class="footer_wrapper_global">
-        <div class="container-fluid px-0">
-            <div class="footer__content">
-                <div class="footer__logo">
-                    <div class="footer__header"><a href('#')="href('#')"><img src="./img/logo.png" /></a></div>
-                    <div class="footer__tel"><span class="icon_custom phone-call"></span>
-                        <p>+7-987-053-07-77</p>
-                        <p>+7-3473-303-515</p>
-                        <p>+7-987-053-07-77</p>
+        <div class="footer__top">
+            <div class="container-fluid px-0">
+                <div class="row no-gutters">
+                    <div class="footer__col">
+                        <div class="footer__logo"><img src="img/logo.png" /></div>
+                        <div class="footer__tel">
+                            <p>+7-987-053-07-77</p>
+                            <p>+7-3473-303-515</p>
+                            <p>+7-987-053-07-77</p><span class="icon_custom phone-call"></span>
+                        </div>
+                        <div class="footer__contacts"><span class="icon_custom map"></span><span> Стерлитамак, Черноморская 18</span></div>
+                        <div class="footer__contacts"><span class="icon_custom mail"></span><span> seller@цвет-база.рф</span></div>
+                        <div class="footer__contacts"><span class="icon_custom time"></span><span> Круглосуточно</span></div>
                     </div>
-                    <div class="footer__contacts"><span class="icon_custom map"></span><span>Стерлитамак, Черноморская 18</span></div>
-                    <div class="footer__contacts"><span class="icon_custom mail"></span><span>seller@цвет-база.рф</span></div>
-                    <div class="footer__contacts"><span class="icon_custom time"></span><span>Круглосуточно</span></div>
-                </div>
-                <div class="footer__col hidden-sm-down">
-                    <div class="footer__header">Меню</div>
-                    <ul class="footer__list list">
-                        <li class="list__item"><a class="list__link" href="#">О компани</a></li>
-                        <li class="list__item"><a class="list__link" href="#">Онлайн-Витрина</a></li>
-                        <li class="list__item"><a class="list__link" href="#">Новости</a></li>
-                        <li class="list__item"><a class="list__link" href="#">Контакты</a></li>
-                        <li class="list__item"><a class="list__link" href="#">Доставка</a></li>
-                        <li class="list__item"><a class="list__link" href="#">Оплата</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col hidden-sm-down">
-                    <div class="footer__header">Каталог</div>
-                    <ul class="footer__list list">
-                        <li class="list__item"><a class="list__link" href="#">Цветы</a></li>
-                        <li class="list__item"><a class="list__link" href="#">Розы</a></li>
-                        <li class="list__item"><a class="list__link" href="#">Букеты</a></li>
-                        <li class="list__item"><a class="list__link" href="#">Композиции</a></li>
-                        <li class="list__item"><a class="list__link" href="#">Повод</a></li>
-                        <li class="list__item"><a class="list__link" href="#">Подарки</a></li>
-                    </ul>
-                </div>
-                <div class="footer__form">
-                    <div class="footer__header">
-                        <form class="form-group" action="#" method="post">
-                            <input class="form-control" type="text" name="name" placeholder="Поиск по сайту" /><span class="icon_custom lens"></span>
-                        </form>
+                    <div class="footer__col hidden-sm-down">
+                        <div class="footer__header">Меню</div>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a class="footer__link" href="#">О компани</a></li>
+                            <li class="footer__list-item"><a class="footer__link" href="#">Онлайн-Витрина</a></li>
+                            <li class="footer__list-item"><a class="footer__link" href="#">Новости</a></li>
+                            <li class="footer__list-item"><a class="footer__link" href="#">Контакты</a></li>
+                            <li class="footer__list-item"><a class="footer__link" href="#">Доставка</a></li>
+                            <li class="footer__list-item"><a class="footer__link" href="#">Оплата</a></li>
+                        </ul>
                     </div>
-                    <div class="footer__absolute-block">
-                        <div class="footer__social"><span>Мы в соцсетях: <img src="./img/social_del.png" /></span></div>
-                        <div class="footer__payment"><span>Способы оплаты:</span><img src="./img/payment.svg" /></div>
+                    <div class="footer__col hidden-sm-down">
+                        <div class="footer__header">Каталог</div>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a class="footer__link" href="#">Цветы</a></li>
+                            <li class="footer__list-item"><a class="footer__link" href="#">Розы</a></li>
+                            <li class="footer__list-item"><a class="footer__link" href="#">Букеты</a></li>
+                            <li class="footer__list-item"><a class="footer__link" href="#">Композиции</a></li>
+                            <li class="footer__list-item"><a class="footer__link" href="#">Повод</a></li>
+                            <li class="footer__list-item"><a class="footer__link" href="#">Подарки</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__form-col">
+                        <div class="footer__header">
+                            <form action="/search/" method="get">
+                                <div class="footer__form form-group">
+                                    <input class="form-control -default-" value="" type="text" name="" autocomplete="off" placeholder=" Поиск по сайту" /><span class="icon_custom lens"></span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="footer__absolute-block">
+                            <div class="footer__social"><span>Мы в соцсетях:</span><img src="./img/social_del.png" />
+                                <!--span vk-->
+                                <!--span insta-->
+                            </div>
+                            <div class="footer__payment"><span>Способы оплаты:</span>
+                                <div><img src="./img/payment_1.png" /><img src="./img/payment_2.png" /><img src="./img/payment_3.png" /><img src="./img/payment_4.png" /><img src="./img/payment_5.png" /><img src="./img/payment_6.png" /></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer__bottom_bg">
+        <div class="footer__bottom_wrapper">
             <div class="container-fluid px-0">
                 <div class="footer__bottom">
-                    <div>© 2017-2019 Интернет магазин цветов <a href="#">Цвет-База.рф</a></div>
-                    <div>Разработано <a href="#">Digital Clouds</a></div>
+                    <div>© 2017-2019 Интернет магазин цветов <a href="">Цвет-База.рф</a></div>
+                    <div>Разработано <a href="">Digital Clouds</a></div>
                 </div>
             </div>
         </div>

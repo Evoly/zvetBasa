@@ -59,6 +59,6 @@
     "popper.js": "^1.15.0",
     "scrollmagic": "^2.0.6",
     "selectize": "^0.12.6",
-    "slick-carousel": "ssh://git@github.com:kenwheeler/slick.git"
+    "slick-carousel": "^1.8.1"
   }
 }

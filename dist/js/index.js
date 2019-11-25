@@ -186,21 +186,6 @@
     }
   };
 
-  function _defineProperty(obj, key, value) {
-    if (key in obj) {
-      Object.defineProperty(obj, key, {
-        value: value,
-        enumerable: true,
-        configurable: true,
-        writable: true
-      });
-    } else {
-      obj[key] = value;
-    }
-
-    return obj;
-  }
-
   /* Настройки для каруселей */
   var _slickSettings = {
     default: {
@@ -209,31 +194,35 @@
       fade: true,
       adaptiveHeight: true
     },
-    banner: {
+    mainPage: {
       infinite: false,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      adaptiveHeight: true
-    },
-    product: {
       slidesToShow: 4,
       slidesToScroll: 1,
+      autoplay: false,
+      arrows: true,
       responsive: [{
-        breakpoint: 992,
+        breakpoint: 960,
         settings: {
           slidesToShow: 3
         }
       }, {
-        breakpoint: 480,
-        settings: _defineProperty({
+        breakpoint: 576,
+        settings: {
           slidesToShow: 2
-        }, "slidesToShow", 1)
+        }
       }, {
-        breakpoint: 320,
-        settings: _defineProperty({
+        breakpoint: 400,
+        settings: {
           slidesToShow: 1
-        }, "slidesToShow", 1)
+        }
       }]
+    },
+    banner: {
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: false,
+      arrows: true
     }
   };
   /**
@@ -296,11 +285,8 @@
 
       console.info('SlickCarousel: .js-slick - runned');
       $('.main-slider .js-slick').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-        $(this).find('.js-counter').text("".concat(nextSlide + 1));
-      }); // TODO: del
-
-      $('.js-slick-next').on('click', function () {
-        console.log('click!');
+        var slide = $(this).find("[data-slick-index=".concat(nextSlide, "]"));
+        $(slide).find('.js-count').text("".concat(nextSlide + 1));
       });
     }
   };
@@ -337,9 +323,9 @@
     /* Scroll компонента */
 
     $(window).scroll(function () {});
-    $('.js-play').on('click', function () {
-      $(this).addClass('is-hidden');
-      $(this).next('.js-video').find('video')[0].play();
+    $('.js-playVideo').on('click', function () {
+      $(this).addClass('hidden');
+      $(this).next('.video__content').children('video')[0].play();
     });
   };
 
@@ -360,7 +346,10 @@
     tooltipDefault: tooltipDefault,
     headerComponent: headerComponent,
     mainPage: mainPage,
-    };
+    //removeIf(production)
+    demoFunc: demoFunc //endRemoveIf(production)
+
+  };
 
   function initFunc() {
     $(document).ready(function () {
@@ -371,7 +360,14 @@
       inputmaskPhone();
       selectizeDefault();
       slickDefault();
-      tooltipDefault(); });
+      tooltipDefault(); //removeIf(production)
+
+      /* То что должно быть вырезано на проде. Начало */
+
+      demoFunc();
+      /* То что должно быть вырезано на проде. Конец */
+      //endRemoveIf(production)
+    });
   }
 
   try {

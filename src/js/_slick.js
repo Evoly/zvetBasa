@@ -4,43 +4,43 @@ const _slickSettings = {
     centerMode: true,
     infinite: false,
     fade: true,
-    adaptiveHeight: true,
+    adaptiveHeight: true
   },
 
+  mainPage: {
+    infinite: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: false,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  },
   banner: {
     infinite: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    adaptiveHeight: true,
-  },
-
-  product: {
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    responsive: [
-    {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 3,
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 2,
-        slidesToShow: 1
-      }
-    },
-    {
-      breakpoint: 320,
-      settings: {
-        slidesToShow: 1,
-        slidesToShow: 1
-      }
-    }
-  ]
-  },
-
+    autoplay: false,
+    arrows: true
+  }
 }
 
 /**
@@ -96,16 +96,11 @@ export const slickDefault = () => {
       _slickItem.slick(_settings)
     })
 
-    console.info('SlickCarousel: .js-slick - runned')
+    console.info('SlickCarousel: .js-slick - runned');
+
     $('.main-slider .js-slick').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-      $(this).find('.js-counter').text(`${nextSlide + 1}`);
+      const slide = $(this).find(`[data-slick-index=${nextSlide}]`);
+      $(slide).find('.js-count').text(`${nextSlide + 1}`);
     });
-
-    // TODO: del
-    $('.js-slick-next').on('click', function(){
-      console.log('click!');
-    });
-
-
   }
 }

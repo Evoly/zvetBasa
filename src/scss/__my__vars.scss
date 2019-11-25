@@ -14,34 +14,29 @@ $font-secondary: sans-serif;
 $font: $font-main, $font-secondary;
 
 //colors
-
+$light-black: #303030;
 $gray: #BDBDBD;
 $another-gray: #F0EDE8;
-$light-gray: #c9c9c9;
-$gray_2: #777;
-$gray_3: #797979;
-$gray_4: #565656;
-$gray_5:FAFAF8;
-
+$dark-gray: #686868;
+$light-gray: #777777;
+$light-gray_1: #797979;
+$light-gray_2: #565656;
+$light-gray_3: #856969;
+$light-gray_4: #FAFAF8;
 $sand: #F9F8F4;
 $dark-sand: #EFEDE4;
-
+$light-gray: #c9c9c9;
 $green: #62AB2A; //card price
-$green-text: #00A568;
-$green_1: #73B640;
+$green_1: #0FA76C;
 $green_2: #029E5C;
-$green_3: #009F61;
-$green_4: #0FA76C;
-$green_5: #86B662;
-
-
+$green_3: #86B662;
+$green_4: #009852;
+$green_hover_1: #73B640;
+$green_hover_2: #009F61;
 $red: #F25C5C;
 $violet: #B74866;
-$rose: #F0CFD6;
 
-$brown: #856969;
 
 
 //transition
-
 $ease-main: .3s ease;

@@ -8,35 +8,37 @@
       display: block;
     }
   }
+}
+  .slick-prev,
+  .slick-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: $light-black;
+    cursor: pointer;
 
-}
-.slick-prev,
-.slick-next {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background-color: #303030;
-  cursor: pointer;
+    .ctrl {
+      color: #fff;
+    }
 
-  .icon_custom:before {
-    color: #fff;
+    &:hover {
+      background-color: $green_4;
+    }
   }
 
-  &:hover {
-    background-color: #009852;
+  .slick-next {
+    .ctrl {
+      transform: rotate(90deg);
+    }
   }
-}
-.slick-prev {
-  .icon_custom {
-    transform: rotate(-90deg);
+
+  .slick-prev {
+    .ctrl {
+      transform: rotate(-90deg);
+    }
   }
-}
-.slick-next {
-  .icon_custom {
-    transform: rotate(90deg);
-  }
-}
+
 /* slick */

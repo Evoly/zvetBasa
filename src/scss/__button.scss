@@ -3,17 +3,17 @@
 /* buttons */
 $b-height: 29px;
 $b-height-sm: 40px;
-$b-height-xl: 90px;
+$b-height-xl: 47px;
 
 $b-border-radius: 60px;
 $b-font-size: 12px;
 $b-disable: 0.5;
-$b-border: 0px;
+$b-border: 1px;
 $b-padding-v: .375rem;
 $b-padding-h: .656rem;
 
 $b-link-color: #00A568;
-$b-link-color-hover: darken($color: #00A568, $amount: 10%);
+$b-link-color-hover: #86B662;
 
 $default-text: #00A568;
 $default-color: #fff;
@@ -131,7 +131,7 @@ $bs: zip($b-types, $b-texts, $b-colors, $b-hover-texts, $b-hover-colors);
     text-decoration: none;
     user-select: none;
     &:hover {
-      border: $b-border solid $default-color;
+      //border: $b-border solid $default-color;
       background: $default-color;
       color: $default-hover-text;
       text-decoration: none;

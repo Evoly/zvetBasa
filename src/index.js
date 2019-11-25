@@ -49,16 +49,16 @@ function initFunc() {
   $(document).ready(function () {
     /* Скрипты необходимые только на конкретной странице */
     mainPage()
-  
+
     /* Компоненты */
     headerComponent()
-  
+
     /* Плагины */
     inputmaskPhone()
     selectizeDefault()
     slickDefault()
     tooltipDefault()
-  
+
     //removeIf(production)
     /* То что должно быть вырезано на проде. Начало */
     demoFunc()

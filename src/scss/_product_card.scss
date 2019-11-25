@@ -17,9 +17,29 @@
 
   &:hover {
     height: 400px;
+    box-shadow: 0px 4px 8px rgba(134, 182, 98, 0.5);
 
     .product_card-sm__buy {
-      display: block;
+      visibility: visible;
+    }
+
+    .product_card-sm__bottom {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__buy {
+    display: block;
+    visibility: hidden;
+    color: $green_3;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: underline;
+          //transition: $ease-main;
+
+    &:hover {
+      color: $red;
     }
   }
 
@@ -34,18 +54,26 @@
     line-height: 1.375;
     font-weight: 600;
     text-align: center;
+    color: inherit;
+    text-decoration: none;
     padding-left: 13px;
     padding-right: 13px;
     margin-bottom: 10px;
-    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
   }
+
   &__description {
     font-size: 12px;
     line-height: 1.333;
     text-align: center;
     padding-left: 13px;
     padding-right: 13px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+  }
+
+  &__price {
+    padding-top: 12px;
   }
 
   &__bottom {
@@ -58,65 +86,62 @@
   }
 
   &__old-price,
+
   &__new-price {
     display: inline-block;
     font-weight: 600;
+    font-size: 18px;
+    line-height: 1.39;
+
+
   }
 
   &__old-price {
     text-decoration: line-through;
     color: $gray;
-    padding-right: 9px;
+    padding-right: 5px;
+    font-size: 16px;
+
+    .rub {
+      font-size: 12px;
+
+      &:before {
+        color: inherit;
+      }
+    }
   }
 
   &__new-price {
     font-size: 18px;
     line-height: 1.39;
-    span {
-      color: $green;
+    .rub {
+      font-size: 14px;
     }
   }
 
   &__cart {
     padding-right: 7px;
+    font-size: 27px;
+    padding-top: 4px;
 
-    .icon_custom {
-      font-size: 25px;
-
-      &:hover {
+    &:hover {
+      a {
         text-decoration: none;
-        transition: $ease-main;
-
-        &:before {
+      }
+      .cart:before {
           color: $red;
-        }
       }
     }
-
   }
 
   &__img {
     max-width: 100%;
-    object-fit: cover;
-    margin-bottom: 15px;
-
-    &:hover {
-      transition: $ease-main;
-    }
-  }
-
-  &__buy {
-    display: none;
-    font-size: 12px;
-    font-weight: 600;
-    text-align: center;
-    color: $green_5;
-
-    &:hover {
-      color: $red;
-      transition: $ease-main;
-    }
-
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 14px;
+    height: 244px;
+    min-height: 244px;
   }
 }
+
 /* product_card */
