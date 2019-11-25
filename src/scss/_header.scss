@@ -19,31 +19,58 @@
   font-size: 12px;
   padding: 6px 6px 4px 15px;
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(sm) {
     font-size: 11px;
-    padding: 6px 1px 6px 1px;
+    padding: 6px 1px 6px 10px;
   }
 
   &__right {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
+
+    div {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__left {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
 
     .header-top__link:last-child {
+      position: relative;
       padding-left: 10px;
-      border-left: 1px solid $font-color;
+
+      &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 1px;
+        height: 12px;
+        background-color:  $font-color;
+        top: 2px;
+        left: 0;
+      }
     }
   }
 
+
   &__link {
+    display: flex;
+    align-items: center;
     color: $b-link-color;
     padding-right: 10px;
+
+    @include media-breakpoint-down(md) {
+      padding-right: 7px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-right: 0;
+    }
+
 
     .user {
       color: #000;
@@ -57,8 +84,6 @@
       .map {
         color: inherit;
       }
-
-
 
       .border-bottom {
         &_dashed {
@@ -86,6 +111,15 @@
   .user {
     font-size: 19px;
     margin-right: -2px;
+
+    @include media-breakpoint-down(md) {
+      font-size: 18px;
+      margin-right: 2px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-right: 0;
+    }
   }
 
   .map {
@@ -106,15 +140,21 @@
   padding-left: 15px;
   padding-right: 15px;
   min-height: 76px;
+  align-items: center;
 
-  .logo {
-    padding-top: 5px;
+  @include media-breakpoint-down(md) {
+    min-height: 66px;
+    padding-top: 15px;
   }
 
-  .row-custom {
+  &.row-custom {
     .col-md_1 {
       @include media-breakpoint-down(md) {
-        flex-basis: 28.78%;
+        flex-basis: 25.88%;
+      }
+
+      @include media-breakpoint-down(sm) {
+        flex-basis: 46.55%;
       }
     }
 
@@ -127,13 +167,11 @@
 
     .col-md_3 {
       @include media-breakpoint-down(md) {
-        flex-basis: 22%;
+        flex-basis: 24.90%;
       }
     }
   }
 }
-
-
 
 .nav-sm {
   display: flex;
@@ -145,7 +183,10 @@
   padding-bottom: 5px;
 
   @include media-breakpoint-down(md) {
-      padding-right: 5px;
+      padding-right: 0;
+      padding-bottom: 0;
+      padding-top: 5px;
+      padding-left: 22px;
   }
 
   &__item {
@@ -180,9 +221,6 @@
   .icon_custom {
     display: block;
     margin-right: 7px;
-    @include media-breakpoint-down(md) {
-      margin-right: 12px;
-    }
   }
 
   .pay {
@@ -192,10 +230,22 @@
   }
 
   .flower {
-    font-size: 18px;
+    font-size: 17px;
+
+    @include media-breakpoint-down(md) {
+      font-size: 15px;
+      margin-right: 5px;
+      margin-top: 2px;
+    }
   }
   .delivery {
         margin-top: 3px;
+
+        @include media-breakpoint-down(md) {
+          font-size: 12px;
+          margin-top: 5px;
+          margin-right: 8px;
+        }
   }
 }
 
