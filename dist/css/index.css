@@ -4601,13 +4601,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 /*---CHUNKS---*/
 /* Шрифты */
-@font-face {
-  font-family: Open Sans;
-  src: url("../fonts/_font.eot") format("embedded-opentype");
-  src: url("../fonts/_font.eot?#iefix") format("embedded-opentype"), url("../fonts/_font.woff") format("woff"), url("../fonts/_font.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal; }
-
 /* reset */
 * {
   outline: none !important; }
