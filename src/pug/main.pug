@@ -21,7 +21,7 @@ block content
           .main-slider__inner.slick_init.js-slick(data-slick="banner")
             - for (var x = 1; x < 4; x++)
               .main-slider__item
-                img(src='../img/banner.jpg').main-slider__img
+                img(src='./img/banner.jpg').main-slider__img
                 .main-slider__content
                   h1.main-slider__header  Заголовок баннера
                   p.main-slider__description.hidden-sm-down Краткое описание баннера <br> в две строки
@@ -35,13 +35,13 @@ block content
       .col-sm-12.advertising
         .advertising__content
           .advertising__item
-            img(src='../img/chek_frame.svg')
+            img(src='./img/chek_frame.svg')
             p.advertising__text Гарантия качества всех товаров магазина!
           .advertising__item
-            img(src='../img/percent.svg')
+            img(src='./img/percent.svg')
             p.advertising__text Низкие цены!
           .advertising__item
-            img(src='../img/car.svg')
+            img(src='./img/car.svg')
             p.advertising__text Бесплатная доставка при заказе от 1000 рублей!
 
     section.section.row.no-gutters.border-bottom
@@ -126,17 +126,17 @@ block content
                     +product_card-sm('bouquet_4')
     section.row.no-gutters.section-about
       picture.section-about__bg
-        <source media="(max-width: 320px)" srcset="../img/video_bg_sm.jpg">
-        img(src='../img/video_bg.jpg' alt='')
+        <source media="(max-width: 320px)" srcset="./img/video_bg_sm.jpg">
+        img(src='./img/video_bg.jpg' alt='')
 
       .col-md-6.col-sm-12
         .video
           .video__wrapper
             .video__poster.js-playVideo
-              img(src='../img/poster.jpg')
+              img(src='./img/poster.jpg')
               span.icon_custom.triangle
             .video__content
-              video( src='../img/coverr.mp4' controls)
+              video( src='./img/coverr.mp4' controls)
       .col-md-6.col-sm-12
         .section-about__text
           h2.section__header О компании
@@ -166,7 +166,7 @@ block content
 
 mixin news(imgName)
   .news
-    .news__img: img(src=`../img/${imgName}.png`)
+    .news__img: img(src=`./img/${imgName}.png`)
     .news__content
       a(href='#').news__header Открыие магазина Цвет-База.рф
       .news__date
