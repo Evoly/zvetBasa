@@ -5504,8 +5504,10 @@ select::-ms-expand {
         width: 1px;
         height: 12px;
         background-color: #000;
-        top: 2px;
-        left: 0; }
+        top: 0px;
+        left: 0;
+        bottom: 0;
+        margin: auto; }
   .header-top__link {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5782,7 +5784,8 @@ select::-ms-expand {
           -ms-flex-align: center;
               align-items: center;
       height: 100%;
-      padding-left: 16px;
+      padding-left: 13px;
+      padding-right: 7px;
       font-size: 14px;
       font-weight: 300;
       color: #fff; }
@@ -5811,7 +5814,7 @@ select::-ms-expand {
       position: absolute;
       width: 22px;
       height: 22px;
-      right: -15px;
+      right: -18px;
       top: 0;
       background-color: #F25C5C;
       border-radius: 50%;

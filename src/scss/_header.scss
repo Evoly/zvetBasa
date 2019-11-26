@@ -51,8 +51,10 @@
         width: 1px;
         height: 12px;
         background-color: $font-color;
-        top: 2px;
+        top: 0px;
         left: 0;
+        bottom: 0;
+        margin: auto;
       }
     }
   }
@@ -358,7 +360,8 @@
       flex-direction: row nowrap;
       align-items: center;
       height: 100%;
-      padding-left: 16px;
+      padding-left: 13px;
+      padding-right: 7px;
       font-size: 14px;
       font-weight: 300;
       color: #fff;
@@ -395,7 +398,7 @@
       position: absolute;
       width: 22px;
       height: 22px;
-      right: -15px;
+      right: -18px;
       top: 0;
       background-color: $red;
       border-radius: 50%;
