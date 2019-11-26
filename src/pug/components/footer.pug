@@ -38,7 +38,9 @@
           form(action="/search/" method="get")
             .footer__form.form-group
               input.form-control.-default-(value="" type="text" name="" autocomplete="off" placeholder=" Поиск по сайту")
-              span.icon_custom.lens
+              button(type="submit").footer__btn
+                span.icon_custom.lens
+                
         .footer__absolute-block
           .footer__social
             span Мы в соцсетях:

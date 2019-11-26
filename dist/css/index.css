@@ -5454,9 +5454,11 @@ select::-ms-expand {
           flex: 0 0 auto; }
 
 .header__tel {
+  display: block;
   font-size: 20px;
   font-weight: 600;
-  text-align: right; }
+  text-align: right;
+  color: inherit; }
 
 .header-top {
   font-size: 12px;
@@ -5556,10 +5558,7 @@ select::-ms-expand {
     margin-right: 5px; }
 
 .header-center {
-  padding-top: 5px;
-  padding-bottom: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 5px 15px 10px;
   min-height: 76px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -5605,10 +5604,7 @@ select::-ms-expand {
   padding-bottom: 5px; }
   @media (max-width: 991.98px) {
     .nav-sm {
-      padding-right: 0;
-      padding-bottom: 0;
-      padding-top: 5px;
-      padding-left: 22px; } }
+      padding: 5px 0 0 22px; } }
   .nav-sm__item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5655,7 +5651,6 @@ select::-ms-expand {
         margin-right: 8px; } }
 
 .navbar {
-  height: 52px;
   padding: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(#73B640), to(#448513));
   background: linear-gradient(180deg, #73B640 0%, #448513 100%);
@@ -5677,20 +5672,28 @@ select::-ms-expand {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 100%;
+    height: 50px;
     list-style: none;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    overflow: hidden; }
   .navbar__item {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    padding-top: 12px;
-    padding-bottom: 12px;
     color: #fff;
     position: relative; }
-    .navbar__item:not(:first-child) .navbar__link {
-      border-left: 1px solid rgba(255, 255, 255, 0.5); }
+    .navbar__item:not(:first-child):before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 1px;
+      height: 54.8%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      background-color: rgba(255, 255, 255, 0.5); }
     .navbar__item:hover {
       -webkit-transition: 0.3s ease;
       transition: 0.3s ease;
@@ -5708,8 +5711,7 @@ select::-ms-expand {
     line-height: 1.39;
     text-align: center;
     color: inherit;
-    padding-left: 15px;
-    padding-right: 15px; }
+    padding: 12px 15px; }
     @media (max-width: 1199.98px) {
       .navbar__link {
         padding-left: 10px;
@@ -5810,12 +5812,12 @@ select::-ms-expand {
       width: 22px;
       height: 22px;
       right: -15px;
-      bottom: 3px;
+      top: 0;
       background-color: #F25C5C;
       border-radius: 50%;
       color: inherit;
       text-align: center;
-      line-height: 23px;
+      line-height: 22px;
       z-index: 2; }
 
 .navbar-dropdown {
@@ -5826,10 +5828,7 @@ select::-ms-expand {
     display: block;
     font-size: 14px;
     border-bottom: 1px solid #F0EDE8;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 18px;
-    padding-right: 18px;
+    padding: 12px 18px;
     color: #62AB2A; }
     .navbar-dropdown__link:hover {
       background-color: #F0EDE8;
@@ -5908,18 +5907,24 @@ select::-ms-expand {
 .footer__form {
   position: relative;
   max-width: 370px; }
-  .footer__form .lens {
-    display: block;
-    position: absolute;
-    right: 15px;
-    top: 0;
-    line-height: 34px;
-    font-size: 20px;
-    z-index: 1; }
-    .footer__form .lens:before {
-      color: #000; }
+  .footer__form .form-control {
+    padding-right: 40px; }
   .footer__form:focus .lens:before, .footer__form:hover .lens:before {
     color: #0FA76C; }
+
+.footer__btn {
+  display: block;
+  position: absolute;
+  right: 6px;
+  top: 0;
+  line-height: 34px;
+  font-size: 20px;
+  z-index: 1;
+  background-color: transparent;
+  border: none;
+  color: inherit; }
+  .footer__btn .lens:before {
+    color: #000; }
 
 .footer__list-item {
   padding-bottom: 17px; }
