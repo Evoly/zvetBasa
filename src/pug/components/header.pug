@@ -39,8 +39,8 @@
     ul.navbar__nav.collapse.navbar-collapse#navbar
       -var data = ['Цветы', 'Розы', 'Букеты', 'Композиции', 'Повод', 'Подарки']
         each val in data
-          li.navbar__item
-            a(href=('#')).navbar__link.dropdown(data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+          li.navbar__item.js-dropdown
+            a(href=('#') data-toggle="dropdown" aria-haspopup="true" aria-expanded="false").navbar__link.dropdown
               span=val
               span.icon_custom.ctrl
             ul.dropdown-menu.navbar-dropdown

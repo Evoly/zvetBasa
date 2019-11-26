@@ -15,19 +15,25 @@ const _slickSettings = {
     arrows: true,
     responsive: [
       {
-        breakpoint: 960,
+        breakpoint: 992,
         settings: {
           slidesToShow: 3
         }
       },
       {
-        breakpoint: 576,
+        breakpoint: 768,
         settings: {
           slidesToShow: 2
         }
       },
       {
-        breakpoint: 400,
+        breakpoint: 460,
+        settings: {
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 0,
         settings: {
           slidesToShow: 1
         }
@@ -92,9 +98,8 @@ export const slickDefault = () => {
       } else {
         _settings.arrows = false
       }
-      
+
       $(_slickList).on('init', function(event, slick){
-        console.log('nav', $('.js-slickNav'));
           $('.js-slickNav').removeClass('is-hidden');
       });
 

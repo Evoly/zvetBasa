@@ -201,17 +201,22 @@
       autoplay: false,
       arrows: true,
       responsive: [{
-        breakpoint: 960,
+        breakpoint: 992,
         settings: {
           slidesToShow: 3
         }
       }, {
-        breakpoint: 576,
+        breakpoint: 768,
         settings: {
           slidesToShow: 2
         }
       }, {
-        breakpoint: 400,
+        breakpoint: 460,
+        settings: {
+          slidesToShow: 1
+        }
+      }, {
+        breakpoint: 0,
         settings: {
           slidesToShow: 1
         }
@@ -281,7 +286,6 @@
         }
 
         $(_slickList).on('init', function (event, slick) {
-          console.log('nav', $('.js-slickNav'));
           $('.js-slickNav').removeClass('is-hidden');
         });
 
@@ -315,7 +319,13 @@
     }
   };
 
-  var headerComponent = function headerComponent() {};
+  var headerComponent = function headerComponent() {
+    $('.js-dropdown').hover(function () {
+      $(this).children('[data-toggle="dropdown"]').click();
+    }, function () {
+      $(this).children('[data-toggle="dropdown"]').click();
+    });
+  };
 
   var mainPage = function mainPage() {
     var screenWidth = $(window).width();
@@ -360,6 +370,9 @@
     $(document).ready(function () {
       /* Скрипты необходимые только на конкретной странице */
       mainPage();
+      /* Компоненты */
+
+      headerComponent();
       /* Плагины */
 
       inputmaskPhone();
