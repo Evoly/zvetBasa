@@ -1,3 +1,10 @@
+$dropdown-min-width: 0;
+$dropdown-font-size: 14px;
+$dropdown-border-width: 0;
+$dropdown-link-color: $green;
+
+
+
 // The dropdown wrapper (`<div>`)
 .dropup,
 .dropright,
@@ -33,6 +40,7 @@
   border: $dropdown-border-width solid $dropdown-border-color;
   @include border-radius($dropdown-border-radius);
   @include box-shadow($dropdown-box-shadow);
+  width: 100%;
 }
 
 @each $breakpoint in map-keys($grid-breakpoints) {

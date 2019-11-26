@@ -34,14 +34,19 @@
     .col-xl-2.col-lg-3.col-md_3.hidden-sm-down
       .header__tel +7-987-0530-777
       .header__tel +7-3473-303-515
-  nav.navbar.hidden-sm-down
-    ul.navbar__nav
+
+  nav.navbar
+    ul.navbar__nav.collapse.navbar-collapse#navbar
       -var data = ['Цветы', 'Розы', 'Букеты', 'Композиции', 'Повод', 'Подарки']
         each val in data
           li.navbar__item
-            a(href=('#')).navbar__link
+            a(href=('#')).navbar__link.dropdown(data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
               span=val
               span.icon_custom.ctrl
+            ul.dropdown-menu.navbar-dropdown
+              -var data_1 = ['Пункт меню', 'Еще один пункт меню', 'Следующий пункт меню', 'Очерндной пункт меню', 'Пункт меню', 'Еще один пункт меню', 'Следующий пункт меню', 'Очерeдной пункт меню']
+                each val in data_1
+                  li.navbar-dropdown__item: a(href=('#')).navbar-dropdown__link=val
         li.navbar__search
           a(href=''): span.icon_custom.lens
         li.navbar__cart

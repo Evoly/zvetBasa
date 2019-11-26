@@ -134,7 +134,9 @@
 
 
 
-    p {
+    a {
+      display: block;
+      color: inherit;
       margin-bottom: 8px;
 
       @include media-breakpoint-down(xs) {
@@ -219,7 +221,7 @@
   }
 
   &__contacts {
-    color: $light-gray;
+    color: #777;
     margin-bottom: 10px;
 
     .icon_custom {
@@ -287,14 +289,15 @@
       }
     }
     @include media-breakpoint-down(xs) {
-      padding-top: 0;
+      padding-top: 12px;
       font-size: 12px;
     }
     &_wrapper {
       background-color: $dark-sand;
     }
-    &__link {
+    &_link {
       color: #73B640;
+      text-decoration: underline;
 
       &:hover {
         color: #00A568;

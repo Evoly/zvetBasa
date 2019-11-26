@@ -13,6 +13,20 @@ $font-secondary: sans-serif;
 
 $font: $font-main, $font-secondary;
 
+//bootstrap
+
+$dropdown-min-width: 0;
+$dropdown-font-size: 14px;
+$dropdown-border-width: 0;
+$dropdown-border-radius: 0;
+$dropdown-inner-border-radius: 0;
+
+$dropdown-link-color: #62AB2A;
+$dropdown-link-hover-color: #009854;
+$dropdown-link-active-color: #009854;
+$dropdown-link-hover-bg: #F0EDE8;
+$dropdown-link-active-bg: #F0EDE8;
+
 //colors
 $light-black: #303030;
 $gray: #BDBDBD;
@@ -31,6 +45,7 @@ $green_1: #0FA76C;
 $green_2: #029E5C;
 $green_3: #86B662;
 $green_4: #009852;
+$green_5: #72B53F;
 $green_hover_1: #73B640;
 $green_hover_2: #009F61;
 $red: #F25C5C;
