@@ -24,6 +24,10 @@ ul {
 img {
   max-width: 100%;
 }
+
+.is-hidden {
+  display: none !important;
+}
 //sections
 
 .section {
@@ -40,6 +44,18 @@ img {
         padding-right: 13px;
         padding-left: 10px;
       }
+
+      &:first-child {
+        padding-right: 0;
+      }
+    }
+
+    .col-7 {
+      padding-left: 10px;
+
+    }
+    .col-5 {
+      padding-right: 13px;
     }
   }
 
@@ -597,7 +613,9 @@ img {
   }
 
   &__item {
+    display: block;
     flex: 0 0 371px;
+
     @include media-breakpoint-down(md) {
       flex: 0 0 361px;
     }
@@ -605,6 +623,8 @@ img {
       flex: 0 0 100%;
     }
   }
+
+
 }
 
 .news {
@@ -616,6 +636,10 @@ img {
   overflow: hidden;
   @include media-breakpoint-down(sm) {
     height: auto;
+  }
+
+  &:hover {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   &__img {

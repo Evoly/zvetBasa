@@ -15,7 +15,7 @@ block content
     .row.no-gutters
       .col-sm-12
         .main-slider
-          .main-slider__nav
+          .main-slider__nav.js-slickNav.is-hidden
             .js-slick-prev.slick-prev: span.icon_custom.ctrl
             .js-slick-next.slick-next: span.icon_custom.ctrl
           .main-slider__inner.slick_init.js-slick(data-slick="banner")
@@ -152,19 +152,17 @@ block content
             span Все новости
       .col-12
         .section-news__content
-          .section-news__item
-            +news('news_1')
+          .section-news__item.section-news__item
+              +news('news_1')
           .section-news__item.hidden-sm-down
-            +news('news_2')
+              +news('news_2')
           .section-news__item.hidden-lg-down
-            +news('news_1')
-
-
+              +news('news_1')
 
 
 
 mixin news(imgName)
-  .news
+  .news&attributes(attributes)
     .news__img: img(src=`./img/${imgName}.png`)
     .news__content
       a(href='#').news__header Открыие магазина Цвет-База.рф

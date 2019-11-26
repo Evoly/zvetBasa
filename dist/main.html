@@ -51,7 +51,7 @@
                 </div>
                 <div class="col-xl-2 col-lg-3 col-md_3 hidden-sm-down"><a class="header__tel" href="tel:+7-987-053-07-77">+7-987-0530-777</a><a class="header__tel" href="tel:+7-3473-303-515">+7-3473-303-515</a></div>
             </div>
-            <nav class="navbar">
+            <nav class="navbar hidden-sm-down">
                 <ul class="navbar__nav collapse navbar-collapse" id="navbar">
                     <li class="navbar__item"><a class="navbar__link dropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Цветы</span><span class="icon_custom ctrl"></span></a>
                         <ul class="dropdown-menu navbar-dropdown">
@@ -125,8 +125,8 @@
                             <li class="navbar-dropdown__item"><a class="navbar-dropdown__link" href="#">Очерeдной пункт меню</a></li>
                         </ul>
                     </li>
-                    <li class="navbar__search"><a href=""><span class="icon_custom lens"></span></a></li>
-                    <li class="navbar__cart"><a href=""><span class="icon-block"><span class="icon_custom cart"></span><span class="counter">0</span></span><span class="hidden-md-down">В вашей корзине пока пусто</span></a></li>
+                    <li class="navbar__search"><a class="navbar__search-icon" href=""><span class="icon_custom lens"></span></a></li>
+                    <li class="navbar__cart"><a class="navbar__cart-icon" href=""><span class="icon-block"><span class="icon_custom cart"></span><span class="counter">0</span></span><span class="hidden-md-down">В вашей корзине пока пусто</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -136,7 +136,7 @@
             <div class="row no-gutters">
                 <div class="col-sm-12">
                     <div class="main-slider">
-                        <div class="main-slider__nav">
+                        <div class="main-slider__nav js-slickNav is-hidden">
                             <div class="js-slick-prev slick-prev"><span class="icon_custom ctrl"></span></div>
                             <div class="js-slick-next slick-next"><span class="icon_custom ctrl"></span></div>
                         </div>
@@ -676,7 +676,7 @@
                 </div>
                 <div class="col-12">
                     <div class="section-news__content">
-                        <div class="section-news__item">
+                        <div class="section-news__item section-news__item">
                             <div class="news">
                                 <div class="news__img"><img src="./img/news_1.png" /></div>
                                 <div class="news__content"><a class="news__header" href="#">Открыие магазина Цвет-База.рф</a>

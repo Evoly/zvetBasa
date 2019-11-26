@@ -252,11 +252,11 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
   }
 
   &__item {
     flex-grow: 1;
+    height: 100%;
     color: #fff;
     position: relative;
 
@@ -310,6 +310,11 @@
     .icon_custom {
       display: inline-block;
       margin-left: 8px;
+
+      @include media-breakpoint-down(md) {
+        font-size: 14px;
+        margin-left: 3px;
+      }
     }
 
     .ctrl {
@@ -324,88 +329,98 @@
       flex: 0 0 51px;
     }
 
-    .lens {
-      font-size: 20px;
+  }
+
+  &__search-icon {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-right: 19px;
+    padding-left: 18px;
+    @include media-breakpoint-down(md) {
+      padding-left: 5px;
+      padding-right: 5px;
     }
 
-    a {
-      display: flex;
-      height: 100%;
-      align-items: center;
-      justify-content: center;
-      padding-right: 19px;
-      padding-left: 18px;
-      @include media-breakpoint-down(md) {
-        padding-left: 0;
-      }
-
-      &:hover {
-        text-decoration: none;
-        transition: $ease-main;
-        background: linear-gradient(180deg, #50911F 0%, #2F600A 100%);
-      }
+    &:hover {
+      text-decoration: none;
+      transition: $ease-main;
+      background: linear-gradient(180deg, #50911F 0%, #2F600A 100%);
+    }
+    .lens {
+      font-size: 20px;
     }
   }
 
   &__cart {
     flex: 0 0 185px;
     height: 100%;
+    color: #fff;
     background: linear-gradient(180deg, #00945D 0%, #007E50 100%), #00A568;
     @include media-breakpoint-down(md) {
       flex: 0 0 52px;
     }
+  }
 
-    a {
-      display: flex;
-      flex-direction: row nowrap;
-      align-items: center;
-      height: 100%;
-      padding-left: 13px;
-      padding-right: 7px;
-      font-size: 14px;
-      font-weight: 300;
-      color: #fff;
-      @include media-breakpoint-down(md) {
-        padding-left: 4px;
-      }
+  &__cart-icon {
+    display: flex;
+    flex-direction: row nowrap;
+    align-items: center;
+    height: 100%;
+    padding-left: 13px;
+    padding-right: 7px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
 
-      &:hover {
-        text-decoration: none;
-        transition: $ease-main;
-        background: linear-gradient(180deg, #50911F 0%, #2F600A 100%);
-      }
+    @include media-breakpoint-down(md) {
+      padding-left: 2px;
+      padding-right: 2px;
+      justify-content: center;
     }
 
-    .cart {
-      font-size: 22px;
-      z-index: 1;
-
-      &:before {
-        color: inherit;
-      }
-    }
-
-    .icon-block {
-      position: relative;
-      display: block;
-      margin-right: 25px;
-      @include media-breakpoint-down(md) {
-        margin-right: 0;
-      }
-    }
-
-    .counter {
-      position: absolute;
-      width: 22px;
-      height: 22px;
-      right: -18px;
-      top: 0;
-      background-color: $red;
-      border-radius: 50%;
+    &:hover {
       color: inherit;
-      text-align: center;
-      line-height: 22px;
-      z-index: 2;
+      text-decoration: none;
+      transition: $ease-main;
+      background: linear-gradient(180deg, #50911F 0%, #2F600A 100%);
+    }
+  }
+  .cart {
+    font-size: 22px;
+    z-index: 1;
+
+    &:before {
+      color: inherit;
+    }
+  }
+
+  .icon-block {
+    position: relative;
+    display: block;
+    margin-right: 25px;
+    @include media-breakpoint-down(md) {
+      margin-right: 0;
+      padding-right: 18px;
+    }
+  }
+
+  .counter {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    right: -18px;
+    top: 0;
+    background-color: $red;
+    border-radius: 50%;
+    color: inherit;
+    text-align: center;
+    line-height: 22px;
+    z-index: 2;
+
+    @include media-breakpoint-down(md) {
+      right:0;
     }
   }
 }

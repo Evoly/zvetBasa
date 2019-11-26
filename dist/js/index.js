@@ -280,6 +280,11 @@
           _settings.arrows = false;
         }
 
+        $(_slickList).on('init', function (event, slick) {
+          console.log('nav', $('.js-slickNav'));
+          $('.js-slickNav').removeClass('is-hidden');
+        });
+
         _slickItem.slick(_settings);
       });
 

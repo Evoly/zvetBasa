@@ -92,6 +92,11 @@ export const slickDefault = () => {
       } else {
         _settings.arrows = false
       }
+      
+      $(_slickList).on('init', function(event, slick){
+        console.log('nav', $('.js-slickNav'));
+          $('.js-slickNav').removeClass('is-hidden');
+      });
 
       _slickItem.slick(_settings)
     })
@@ -102,5 +107,6 @@ export const slickDefault = () => {
       const slide = $(this).find(`[data-slick-index=${nextSlide}]`);
       $(slide).find('.js-count').text(`${nextSlide + 1}`);
     });
+
   }
 }

@@ -35,7 +35,7 @@
       a(href="tel:+7-987-053-07-77").header__tel +7-987-0530-777
       a(href="tel:+7-3473-303-515").header__tel +7-3473-303-515
 
-  nav.navbar
+  nav.navbar.hidden-sm-down
     ul.navbar__nav.collapse.navbar-collapse#navbar
       -var data = ['Цветы', 'Розы', 'Букеты', 'Композиции', 'Повод', 'Подарки']
         each val in data
@@ -48,9 +48,9 @@
                 each val in data_1
                   li.navbar-dropdown__item: a(href=('#')).navbar-dropdown__link=val
         li.navbar__search
-          a(href=''): span.icon_custom.lens
+          a(href='').navbar__search-icon: span.icon_custom.lens
         li.navbar__cart
-          a(href='')
+          a(href='').navbar__cart-icon
             span.icon-block
               span.icon_custom.cart
               span.counter 0
