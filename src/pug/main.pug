@@ -21,7 +21,10 @@ block content
           .main-slider__inner.slick_init.js-slick(data-slick="banner")
             - for (var x = 1; x < 4; x++)
               .main-slider__item
-                img(src='./img/banner.jpg').main-slider__img
+                picture.main-slider__img
+                  <source media="(max-width: 320px)" srcset="./img/banner_sm.jpg">
+                  img(src='./img/banner.jpg' alt='')
+                //img(src='./img/banner.jpg').main-slider__img
                 .main-slider__content
                   h1.main-slider__header  Заголовок баннера
                   p.main-slider__description.hidden-sm-down Краткое описание баннера <br> в две строки

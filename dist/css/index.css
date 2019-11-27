@@ -6623,7 +6623,7 @@ img {
       color: #fff;
       background-color: #73B640;
       margin-right: 11px; }
-  .main-slider__img {
+  .main-slider__img img {
     position: absolute;
     width: 100%;
     height: 100%;
