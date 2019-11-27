@@ -1,5 +1,5 @@
-@import './__my__vars.scss';
-/* main */
+@import './__my__vars.scss'; /* main */
+
 .main {
   &_wrapper_global {
     flex: 1 0 auto;
@@ -372,18 +372,19 @@ img {
 
   &__img {
     img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 65%;
-    right: 0;
-    bottom: 0;
-    object-fit: cover;
-    z-index: -1;
-    transform: translate3d(-65%, 0, 0);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 65%;
+      right: 0;
+      bottom: 0;
+      object-fit: cover;
+      z-index: -1;
+      transform: translate3d(-65%, 0, 0);
+    }
   }
-}
+
   &__content {
     max-width: 50%;
   }
@@ -583,9 +584,9 @@ img {
 
 .section-news {
   padding-top: 5px;
-  padding-bottom: 70px;
+  padding-bottom: 60px;
   @include media-breakpoint-down(md) {
-    padding-bottom: 40px;
+    padding-bottom: 35px;
   }
   @include media-breakpoint-down(sm) {
     padding-top: 10px;
@@ -597,26 +598,20 @@ img {
     flex-flow: row nowrap;
     justify-content: space-between;
     padding-top: 30px;
-    padding-left: 15px;
-    padding-right: 17px;
     @include media-breakpoint-down(md) {
       padding-top: 0;
     }
-    @include media-breakpoint-down(sm) {
-      padding-left: 10px;
-      padding-right: 10px;
+
+    [class*=col-] {
+      @include media-breakpoint-down(sm) {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
     }
   }
 
   &__item {
     display: block;
-    //flex: 0 0 371px;
-    @include media-breakpoint-down(md) {
-      //flex: 0 0 361px;
-    }
-    @include media-breakpoint-down(sm) {
-      //flex: 0 0 100%;
-    }
 
     &:hover {
       text-decoration: none;
@@ -644,7 +639,7 @@ img {
   }
 
   &__img {
-    flex: 1 0 0;
+    flex: 1 0 50%;
 
     img {
       width: 100%;
@@ -654,9 +649,8 @@ img {
   }
 
   &__content {
-    flex: 1 0 0;
-    //flex: 0 0 50%;
-    padding: 14px 22px 10px 15px;
+    flex: 1 0 50%;
+    padding: 14px 22px 12px 15px;
     @include media-breakpoint-down(md) {
       padding-top: 15px;
       padding-right: 12px;
@@ -724,11 +718,9 @@ img {
   }
 }
 
-
-  .hidden-xs-down {
-    @media (max-width: 576px) {
+.hidden-xs-down {
+  @media (max-width: 576px) {
     display: none;
   }
- }
-
+}
 /* main */

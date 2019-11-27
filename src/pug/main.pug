@@ -24,7 +24,6 @@ block content
                 picture.main-slider__img
                   <source media="(max-width: 320px)" srcset="./img/banner_sm.jpg">
                   img(src='./img/banner.jpg' alt='')
-                //img(src='./img/banner.jpg').main-slider__img
                 .main-slider__content
                   h1.main-slider__header  Заголовок баннера
                   p.main-slider__description.hidden-sm-down Краткое описание баннера <br> в две строки
@@ -152,7 +151,7 @@ block content
           a(href='#').btn_custom.gradient.gradient_green
             span Все новости
       .col-12
-        .row.section-news__content
+        .section-news__content
           .col-lg-4.col-md-6.col-sm-6.col-12
             +news('news_1')
           .col-lg-4.col-md-6.col-sm-6.col-6.hidden-xs-down
