@@ -479,6 +479,9 @@ img {
       padding-right: 10px;
       padding-bottom: 20px;
       font-size: 12px;
+    }
+
+    @include media-breakpoint-down(xs) {
       text-align: center;
     }
 

@@ -6734,7 +6734,9 @@ img {
         padding-top: 10px;
         padding-right: 10px;
         padding-bottom: 20px;
-        font-size: 12px;
+        font-size: 12px; } }
+    @media (max-width: 575.98px) {
+      .section-about__text {
         text-align: center; } }
     .section-about__text p {
       line-height: 1.8;
