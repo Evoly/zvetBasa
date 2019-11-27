@@ -7084,9 +7084,12 @@ img {
       height: auto; } }
   .news:hover {
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit; }
     .news:hover .news__header {
-      color: #00a568; }
+      color: #00a568;
+      text-decoration: underline; }
   .news__img {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 50%;
