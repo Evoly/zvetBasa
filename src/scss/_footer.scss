@@ -171,7 +171,7 @@
     padding-right: 15px;
     padding-left: 15px;
     flex: 1;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(xs) {
       flex-basis: 100%;
     }
     @include media-breakpoint-down(sm) {
@@ -182,7 +182,7 @@
       padding-right: 110px;
       flex: 0 0 260px;
       box-sizing: content-box;
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(xs) {
         flex: 0 0 100%;
         padding-right: 10px;
         box-sizing: border-box;
@@ -209,19 +209,27 @@
         margin-bottom: 0;
         align-items: flex-end;
 
+        // @include media-breakpoint-down(sm) {
+        //   flex-basis: 100%;
+        //   align-items: center;
+        //   padding-top: 10px;
+        //   margin-bottom: 10px;
+        // }
+
+        &:before {
+          content: none;
+        }
+      }
+      .footer__header {
         @include media-breakpoint-down(sm) {
           flex-basis: 100%;
           align-items: center;
           padding-top: 10px;
           margin-bottom: 10px;
         }
-
-        &:before {
-          content: none;
-        }
       }
     }
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(xs) {
       flex-basis: 100%;
       box-sizing: border-box;
       margin-left: initial;

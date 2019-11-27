@@ -126,7 +126,7 @@ block content
         <source media="(max-width: 320px)" srcset="./img/video_bg_sm.jpg">
         img(src='./img/video_bg.jpg' alt='')
 
-      .col-md-6.col-sm-12
+      .col-md-6.col-sm-6.col-12
         .video
           .video__wrapper
             .video__poster.js-playVideo
@@ -134,7 +134,7 @@ block content
               span.icon_custom.triangle
             .video__content
               video( src='./img/coverr.mp4' controls)
-      .col-md-6.col-sm-12
+      .col-md-6.col-sm-6.col-12
         .section-about__text
           h2.section__header О компании
           p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat erat ut lorem bibendum, sit amet convallis erat pellentesque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris ornare diam ut consectetur mollis. Nam semper tempus neque non consequat. Aliquam viverra ipsum vel risus porta rutrum. Donec eget viverra libero.#[span.hidden-md-down Mauris et mauris velit. Suspendisse luctus congue dolor vel malesuada. Sed vel ipsum dapibus, ultricesneque quis, eleifend elit. Sed eget mauris et ligula ultrices congue vitae ut ligula.]
@@ -149,18 +149,18 @@ block content
           a(href='#').btn_custom.gradient.gradient_green
             span Все новости
       .col-12
-        .section-news__content
-          a(href='#').section-news__item.section-news__item
+        .row.section-news__content
+          .col-lg-4.col-md-6.col-sm-6.col-12
             +news('news_1')
-          a(href='#').section-news__item.hidden-sm-down
+          .col-lg-4.col-md-6.col-sm-6.col-6.hidden-xs-down
             +news('news_2')
-          a(href='#').section-news__item.hidden-lg-down
+          .col-lg-4.hidden-md-down
             +news('news_1')
 
 
 
 mixin news(imgName)
-  .news&attributes(attributes)
+  a(href='#').news&attributes(attributes)
     .news__img: img(src=`./img/${imgName}.png`)
     .news__content
       p.news__header Открытие магазина Цвет-База.рф

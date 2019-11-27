@@ -1,5 +1,5 @@
-@import './__my__vars.scss'; /* main */
-
+@import './__my__vars.scss';
+/* main */
 .main {
   &_wrapper_global {
     flex: 1 0 auto;
@@ -38,7 +38,6 @@ img {
     margin-bottom: 22px;
     display: flex;
     align-items: center;
-
     @include media-breakpoint-down(md) {
       margin-bottom: 20px;
     }
@@ -54,7 +53,6 @@ img {
       }
     }
   }
-
 
   &__slider {
     position: relative;
@@ -77,20 +75,18 @@ img {
 
 .slider {
   .slick-list {
-    margin-left:  -15px;
-    margin-right:  -15px;
-
+    margin-left: -15px;
+    margin-right: -15px;
     @include media-breakpoint-down(md) {
-      margin-left:  -10px;
-      margin-right:  -10px;
+      margin-left: -10px;
+      margin-right: -10px;
     }
-
     @include media-breakpoint-down(xs) {
-      margin-left:  0;
-      margin-right:  0;
+      margin-left: 0;
+      margin-right: 0;
     }
-
   }
+
   &__nav {
     font-size: 19px;
 
@@ -441,7 +437,6 @@ img {
   overflow: hidden;
   @include media-breakpoint-down(md) {
     margin-bottom: 20px;
-    //padding-bottom: 5px;
   }
 
   .section__header {
@@ -614,12 +609,12 @@ img {
 
   &__item {
     display: block;
-    flex: 0 0 371px;
+    //flex: 0 0 371px;
     @include media-breakpoint-down(md) {
-      flex: 0 0 361px;
+      //flex: 0 0 361px;
     }
     @include media-breakpoint-down(sm) {
-      flex: 0 0 100%;
+      //flex: 0 0 100%;
     }
 
     &:hover {
@@ -631,12 +626,11 @@ img {
 .news {
   display: flex;
   flex: row nowrap;
-  height: 187px;
   border-radius: 5px;
   background-color: $light-gray_4;
   overflow: hidden;
   color: #000;
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(xs) {
     height: auto;
   }
 
@@ -649,21 +643,25 @@ img {
   }
 
   &__img {
-    object-fit: cover;
-    flex-shrink: 0;
-    @include media-breakpoint-down(xl) {
-      flex-shrink: 0;
-      flex-grow: 0;
-    }
-    @include media-breakpoint-down(sm) {
-      flex-basis: 50%;
+    flex: 1 0 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
   &__content {
+    flex: 1 0 0;
+    //flex: 0 0 50%;
     padding: 14px 22px 10px 15px;
+    @include media-breakpoint-down(md) {
+      padding-top: 15px;
+      padding-right: 12px;
+    }
     @include media-breakpoint-down(sm) {
-      padding: 6px 6px 7px 8px;
+      padding: 6px 1px 6px 5px;
     }
   }
 
@@ -724,4 +722,12 @@ img {
     display: none;
   }
 }
+
+
+  .hidden-xs-down {
+    @media (max-width: 576px) {
+    display: none;
+  }
+ }
+
 /* main */
