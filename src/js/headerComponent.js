@@ -17,4 +17,13 @@ export const headerComponent = () => {
   }
 });
 
+// $('.navbar-collapse').on('click', function() {
+//   $(document).mouseup(function(e) {
+//     const container = $(".navbar__nav");
+//     if (e.target != container[0] && container.has(e.target).length === 0) {
+//       $('.navbar-collapse').collapse('hide')
+//     }
+//   });
+// });
+
 };

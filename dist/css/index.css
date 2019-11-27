@@ -5724,9 +5724,11 @@ select::-ms-expand {
         width: 0;
         max-width: 250px;
         height: 100%;
-        padding: 23px 10px;
-        -webkit-transition: width 3s ease-out;
-        transition: width 3s ease-out; } }
+        padding: 15px 10px;
+        -webkit-transition-delay: 2s;
+                transition-delay: 2s;
+        -webkit-transition: 3s ease-out;
+        transition: 3s ease-out; } }
   .navbar__item {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -5795,7 +5797,10 @@ select::-ms-expand {
         font-size: 16px; } }
     @media (max-width: 767.98px) {
       .navbar__link {
-        text-align: left; } }
+        text-align: left;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 0; } }
     .navbar__link .icon_custom {
       display: inline-block;
       margin-left: 8px; }
@@ -5916,12 +5921,14 @@ select::-ms-expand {
 .navbar-dropdown {
   margin: 0;
   padding: 0;
-  border-radius: 0;
-  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15); }
+  border-radius: 0; }
+  @media (min-width: 768px) {
+    .navbar-dropdown {
+      -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+              box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15); } }
   @media (max-width: 767.98px) {
     .navbar-dropdown {
-      position: static; } }
+      position: relative; } }
   .navbar-dropdown__link {
     display: block;
     font-size: 14px;
@@ -5942,7 +5949,28 @@ select::-ms-expand {
         color: #5E5E5E; } }
 
 .btn-close {
-  display: none; }
+  position: absolute;
+  top: 10px;
+  right: 45px; }
+  .btn-close__icon {
+    position: absolute;
+    -webkit-transition: 0.3s 0.3s ease;
+    transition: 0.3s 0.3s ease; }
+    .btn-close__icon:before, .btn-close__icon:after {
+      position: absolute;
+      left: 12px;
+      content: ' ';
+      height: 24px;
+      width: 3px;
+      background: #72B53F; }
+    .btn-close__icon:before {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    .btn-close__icon:after {
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+  .btn-close:hover {
+    opacity: .7; }
 
 .btn-open {
   position: relative;
@@ -6019,6 +6047,20 @@ select::-ms-expand {
         color: #72B53F; }
 
 /* header */
+@media (max-width: 767.98px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; }
+  .navbar-collapse.collapsing {
+    height: auto;
+    left: -100%; }
+  .navbar-collapse.show {
+    left: 0;
+    -webkit-transition: left 0.3s ease-in;
+    transition: left 0.3s ease-in; } }
+
 /* footer */
 .footer_wrapper_global {
   -webkit-box-flex: 0;
