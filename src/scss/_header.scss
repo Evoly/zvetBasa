@@ -1,5 +1,5 @@
-@import './__my__vars.scss'; /* header */
-
+@import './__my__vars.scss';
+/* header */
 .header {
   &_wrapper_global {
     flex: 0 0 auto;
@@ -51,7 +51,7 @@
         width: 1px;
         height: 12px;
         background-color: $font-color;
-        top: 0px;
+        top: 0;
         left: 0;
         bottom: 0;
         margin: auto;
@@ -138,6 +138,9 @@
   @include media-breakpoint-down(md) {
     min-height: 66px;
     padding-top: 15px;
+  }
+  @include media-breakpoint-down(sm) {
+    order: 1;
   }
 
   &.row-custom {
@@ -242,16 +245,39 @@
   @include media-breakpoint-down(md) {
     padding-right: 14px;
   }
+  @include media-breakpoint-down(sm) {
+    position: fixed;
+    top: 0;
+    background: rgba(#000, .5);
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+
+    &.show {
+      .navbar__nav {
+        width: 250px;
+      }
+    }
+  }
 
   &__nav {
     display: flex;
     flex-basis: 100%;
     flex-direction: row nowrap;
     align-items: center;
-    height:52px;
+    height: 52px;
     list-style: none;
     margin: 0;
     padding: 0;
+    @include media-breakpoint-down(sm) {
+      display: block;
+      background-color: #fff;
+      width: 0;
+      max-width: 250px;
+      height: 100%;
+      padding: 23px 10px;
+      transition: width 3s ease-out;
+    }
   }
 
   &__item {
@@ -259,6 +285,11 @@
     height: 100%;
     color: #fff;
     position: relative;
+    @include media-breakpoint-down(sm) {
+      color: $green_hover_1;
+      flex: 0 0 0;
+      height: auto;
+    }
 
     &:not(:first-child) {
       &:before {
@@ -273,6 +304,9 @@
         margin: auto;
         background-color: rgba(#fff, .5);
       }
+      @include media-breakpoint-down(sm) {
+        content: none;
+      }
     }
 
     &:hover {
@@ -283,11 +317,32 @@
         color: inherit;
         text-decoration: none;
       }
+      @include media-breakpoint-down(sm) {
+        background: inherit;
+      }
     }
 
     &:first-child {
-      @include media-breakpoint-down(md) {
-        padding-left: 14px;
+      @include media-breakpoint-down(sm) {
+        background: inherit;
+      }
+    }
+
+    &.show {
+      @include media-breakpoint-down(sm) {
+        background-color: $dropdown-link-active-bg;
+
+        .ctrl {
+          transform: rotate(0) translateY(5px);
+
+          &:before {
+            color: $link-color;
+          }
+        }
+
+        .navbar__link {
+          color: $link-color;
+        }
       }
     }
   }
@@ -306,11 +361,13 @@
     @include media-breakpoint-down(md) {
       font-size: 16px;
     }
+    @include media-breakpoint-down(sm) {
+      text-align: left;
+    }
 
     .icon_custom {
       display: inline-block;
       margin-left: 8px;
-
       @include media-breakpoint-down(md) {
         font-size: 14px;
         margin-left: 3px;
@@ -328,7 +385,6 @@
     @include media-breakpoint-down(md) {
       flex: 0 0 51px;
     }
-
   }
 
   &__search-icon {
@@ -348,6 +404,7 @@
       transition: $ease-main;
       background: linear-gradient(180deg, #50911F 0%, #2F600A 100%);
     }
+
     .lens {
       font-size: 20px;
     }
@@ -373,7 +430,6 @@
     font-size: 14px;
     font-weight: 300;
     color: #fff;
-
     @include media-breakpoint-down(md) {
       padding-left: 2px;
       padding-right: 2px;
@@ -387,6 +443,7 @@
       background: linear-gradient(180deg, #50911F 0%, #2F600A 100%);
     }
   }
+
   .cart {
     font-size: 22px;
     z-index: 1;
@@ -418,9 +475,8 @@
     text-align: center;
     line-height: 22px;
     z-index: 2;
-
     @include media-breakpoint-down(md) {
-      right:0;
+      right: 0;
     }
   }
 }
@@ -429,6 +485,10 @@
   margin: 0;
   padding: 0;
   border-radius: 0;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  @include media-breakpoint-down(sm) {
+    position: static;
+  }
 
   &__link {
     display: block;
@@ -437,31 +497,104 @@
     padding: 12px 18px;
     color: $dropdown-link-color;
 
+    &:active,
     &:hover {
       background-color: $dropdown-link-hover-bg;
       text-decoration: none;
       color: $dropdown-link-active-color;
+      @include media-breakpoint-down(sm) {
+        color: $green_hover_1;
+        background-color: rgba($dropdown-link-hover-bg, .5);
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      border-bottom: 1px solid transparent;
+      color: $dark-gray_1;
+    }
+  }
+}
+
+.btn-close {
+  display: none;
+}
+
+.btn-open {
+  position: relative;
+  padding-right: 5px;
+
+  &:hover {
+    opacity: .7;
+    transition: $ease-main;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    height: 3px;
+    width: 23px;
+    background: $green_5;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: -8px;
+      left: 0;
+      height: inherit;
+      width: inherit;
+      background: inherit;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      top: 8px;
+      left: 0;
+      height: inherit;
+      width: inherit;
+      background: inherit;
+    }
+  }
+}
+
+.mobile-menu {
+  display: none;
+  padding: 20px 10px 18px;
+  align-items: center;
+  justify-content: space-between;
+  @include media-breakpoint-down(sm) {
+    display: flex;
+  }
+
+  &__icons {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+  .logo {
+    flex-basis: 45%;
+  }
+
+  &__icon {
+    display: block;
+    padding-left: 20px;
+
+    &:hover {
+      text-decoration: none;
+      opacity: .7;
+      transition: $ease-main;
+    }
+
+    .icon_custom {
+      font-size: 20px;
+
+      &:before {
+        color: $green_5;
+      }
     }
   }
 }
 /* header */
-// .burger-btn, .burger-btn:before, .burger-btn:after {
-//   position: absolute;
-//   top: 50%;
-//   left: 2px;
-//   height: 3px;
-//   width: 23px;
-//   background: $green_5;
-//   -webkit-transition: all 0.25s;
-//   transition: all 0.25s;
-// }
-// .burger-btn:before {
-//   content: '';
-//   top: -8px;
-//   left: 0;
-// }
-// .burger-btn:after {
-//   content: '';
-//   top: 8px;
-//   left: 0;
-// }
