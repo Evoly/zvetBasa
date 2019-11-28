@@ -5683,11 +5683,12 @@ select::-ms-expand {
 
 .navbar {
   height: 52px;
-  padding: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#73B640), to(#448513));
-  background: linear-gradient(180deg, #73B640 0%, #448513 100%);
-  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); }
+  padding: 0; }
+  .navbar_bg-wide {
+    background: -webkit-gradient(linear, left top, left bottom, from(#73B640), to(#448513));
+    background: linear-gradient(180deg, #73B640 0%, #448513 100%);
+    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); }
   @media (max-width: 991.98px) {
     .navbar {
       padding-right: 14px; } }
