@@ -28,6 +28,16 @@ img {
 .is-hidden {
   display: none !important;
 }
+.modal-show {
+  overflow: hidden;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 //sections
 
 .section {
@@ -59,6 +69,9 @@ img {
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 7px;
+    @include media-breakpoint-down(up) {
+      height: 430px;
+    }
     @include media-breakpoint-down(md) {
       margin-bottom: 0;
     }
@@ -240,6 +253,10 @@ img {
 .main-slider {
   position: relative;
   margin-bottom: 25px;
+
+  @include media-breakpoint-up(lg) {
+    height: 340px;
+  }
 
   &__nav {
     display: flex;
@@ -542,7 +559,7 @@ img {
       right: 0;
       bottom: 0;
       object-fit: cover;
-      z-index: 100;
+      z-index: 1;
     }
   }
 
@@ -559,7 +576,7 @@ img {
     background: rgba(#fff, 0.4);
     font-size: 37px;
     padding-left: 10px;
-    z-index: 101;
+    z-index: 2;
     @include media-breakpoint-down(md) {
       width: 80px;
       height: 80px;

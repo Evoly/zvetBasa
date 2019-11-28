@@ -1,5 +1,5 @@
-@import './__my__vars.scss'; /* header */
-
+@import './__my__vars.scss';
+/* header */
 .header {
   &_wrapper_global {
     flex: 0 0 auto;
@@ -22,7 +22,7 @@
   padding: 6px 6px 4px 15px;
   @include media-breakpoint-down(sm) {
     font-size: 11px;
-    padding: 6px 1px 6px 10px;
+    padding: 6px 10px;
   }
 
   &__right {
@@ -242,11 +242,10 @@
   &_bg-wide {
     background: linear-gradient(180deg, #73B640 0%, #448513 100%);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    z-index: 12;
   }
   height: 52px;
   padding: 0;
-  //background: linear-gradient(180deg, #73B640 0%, #448513 100%);
-  //box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
   @include media-breakpoint-down(md) {
     padding-right: 14px;
   }
@@ -255,7 +254,7 @@
     top: 0;
     background: rgba(#000, .5);
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     z-index: 100;
 
     &.show {
@@ -279,11 +278,12 @@
       background-color: #fff;
       width: 0;
       max-width: 250px;
-      height: 100%;
+      min-height: 100vh;
       padding-top: 15px;
       padding-bottom: 15px;
       transition-delay: 2s;
       transition: 3s ease-out;
+      overflow: auto;
     }
   }
 
@@ -523,12 +523,22 @@
   }
 }
 
+.navbar.show {
+  .btn-close {
+    opacity: 1;
+  }
+}
+
 .btn-close {
-  position: absolute;
-  top: 10px;
+  position: fixed;
+  width: 25px;
+  height: 30px;
+  top: 0;
   right: 45px;
   border: none;
   background-color: transparent;
+  opacity: 0;
+  transition: $ease-main;
 
   &__icon {
     position: absolute;
@@ -608,10 +618,12 @@
   padding: 20px 10px 18px;
   align-items: center;
   justify-content: space-between;
+  background-color: #fff;
+  border-bottom: 1px solid $another-gray;
+  z-index: 10;
   @include media-breakpoint-down(sm) {
     display: flex;
     position: relative;
-    z-index: 1;
   }
 
   &__icons {
@@ -668,10 +680,6 @@
     background-color: #fff;
     color: #000;
 
-    &.is-show {
-      border-bottom: 3px solid $link-color;
-    }
-
     .search-form__btn-close {
       color: $green_5;
     }
@@ -706,7 +714,7 @@
     background-color: transparent;
 
     &:hover {
-      opacity: .7;
+      opacity: 0.7;
       transition: $ease-main;
     }
   }
@@ -718,15 +726,16 @@
     top: 0;
     margin: auto;
     width: 24px;
-    height: 24px;
+    height: 18px;
     color: inherit;
     border: none;
     background-color: transparent;
     font-size: 18px;
     line-height: 18px;
+    padding: 0;
 
     &:hover {
-      opacity: .7;
+      opacity: 0.7;
       transition: $ease-main;
     }
   }
@@ -754,20 +763,26 @@
 }
 /* header */
 @include media-breakpoint-down(sm) {
-  .navbar-collapse {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
   .navbar-collapse.collapsing {
     height: auto;
     left: -100%;
+    transition-delay: 0.5s;
+    transition: left 0.3s ease-in;
+
+    .btn-close {
+      opacity: 0;
+      transition-delay: 0s;
+    }
   }
 
   .navbar-collapse.show {
     left: 0;
     transition: left 0.3s ease-in;
+    transition-delay: 0.2s;
+
+    .btn-close {
+      opacity: 1;
+      transition-delay: 1s;
+    }
   }
 }

@@ -15,7 +15,7 @@
             a(href='#').header-top__link: span.icon_custom.user
             a(href='#').header-top__link.hidden-sm-down: span.border-bottom_dashed  Вход
             a(href='#').header-top__link.hidden-sm-down: span.border-bottom_dashed  Регистрация
-.container-fluid.px-
+.container-fluid.px-0
   .row.no-gutters.header-center.row-custom.hidden-sm-down
     .col-xl-3.col-lg-3.col-md_1.col-sm-4
       a(href=('#')).logo: img(src='img/logo.png' alt='Цвет-база.рф')
@@ -34,12 +34,11 @@
       a(href="tel:+7-987-053-07-77").header__tel +7-987-0530-777
       a(href="tel:+7-3473-303-515").header__tel +7-3473-303-515
 
-.navbar_bg-wide
-  .container-fluid.px-0
-  
+.navbar_bg-wide.js-fixedMenu
+  .container-fluid.px-0  
     nav.navbar-expand-md  
       .navbar.collapse.navbar-collapse#navbar
-        button.navbar-toggler(class='btn-close' type='button', data-toggle='collapse', data-target='#navbar', aria-controls='navbarnavbar', aria-expanded='false', aria-label='Toggle navigation')
+        button.navbar-toggler(class='btn-close' type='button', data-toggle='collapse', data-target='#navbar', aria-controls='navbar', aria-expanded='false', aria-label='Toggle navigation')
           span.btn-close__icon
         ul.navbar__nav
           -var data = ['Цветы', 'Розы', 'Букеты', 'Композиции', 'Повод', 'Подарки']
@@ -62,8 +61,8 @@
                 span.hidden-md-down В вашей корзине пока пусто
 
 .container-fluid.px-0
-  .mobile-menu
-    button.navbar-toggler(class='btn-open' type='button', data-toggle='collapse', data-target='#navbar', aria-controls='navbarnavbar', aria-expanded='false', aria-label='Toggle navigation')
+  .mobile-menu.js-fixedMenu
+    button.navbar-toggler(class='btn-open' type='button', data-toggle='collapse', data-target='#navbar', aria-controls='navbar', aria-expanded='false', aria-label='Toggle navigation')
       span.btn-open__icon
     
     a(href=('#')).logo: img(src='img/logo.png' alt='Цвет-база.рф')
