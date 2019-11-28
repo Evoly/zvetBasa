@@ -1,9 +1,9 @@
 mixin product_card-sm(imgName)
   .product_card-sm&attributes(attributes)
     if (imgName)
-      a(href='#').product_card-sm__img: img(src=`./img/${imgName}.png`)
+      a(href='#').product_card-sm__img: img(src=`./img/${imgName}.png` alt='')
     else
-      a(href='#').product_card-sm__img: img(src='./img/hit_1.png').product_card-sm__img
+      a(href='#').product_card-sm__img: img(src='./img/hit_1.png'  alt='').product_card-sm__img
     a.product_card-sm__title БУКЕТ №117 "ТУРИН"
     .product_card-sm__description Состав: Хризантема - 15, Роза - 7, Солидаго - 4, Упаковка
     .product_card-sm__bottom
