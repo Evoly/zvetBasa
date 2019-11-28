@@ -1,0 +1,12 @@
+mixin search-form(navbar)
+  .search-form&attributes(attributes)
+    if navbar
+      .navbar__search-icon.js-search: span.icon_custom.lens
+    else 
+      .js-search: span.icon_custom.lens
+    .search-form__hidden
+      input.form-control.-default-(value="" type="text" name="name" autocomplete="off" placeholder=" Поиск по сайту")
+      button(type="submit").search-form__btn-search
+        span.icon_custom.lens
+      button(type="submit").search-form__btn-close.js-closeInput
+        span &#x2715;

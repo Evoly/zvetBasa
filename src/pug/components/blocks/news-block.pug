@@ -1,0 +1,9 @@
+mixin news(imgName)
+  a(href='#').news&attributes(attributes)
+    .news__img: img(src=`./img/${imgName}.png`)
+    .news__content
+      p.news__header Открытие магазина Цвет-База.рф
+      .news__date
+        span.icon_custom.time
+        span 01.06.2017
+      p.news__text  С 1 июня 2017 мы открываем наш магазин. Цвет-база.рф - это магазин цветов нового формата.

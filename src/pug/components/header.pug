@@ -50,7 +50,7 @@
                   each val in data_1
                     li.navbar-dropdown__item: a(href=('#')).navbar-dropdown__link=val
           li.navbar__search.hidden-sm-down
-            a(href='').navbar__search-icon: span.icon_custom.lens
+            +search-form(true).search-form_lg
           li.navbar__cart.hidden-sm-down
             a(href='').navbar__cart-icon
               span.icon-block
@@ -65,6 +65,9 @@
     a(href=('#')).logo: img(src='img/logo.png')
       
     .mobile-menu__icons
-      a(href=('#')).mobile-menu__icon: span.icon_custom.lens
+      .mobile-menu__icon
+        +search-form.search-form_sm
       a(href=('#')).mobile-menu__icon: span.icon_custom.cart
       a(href=('#')).mobile-menu__icon: span.icon_custom.phone-call
+
+      

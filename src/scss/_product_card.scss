@@ -25,6 +25,9 @@
 
     .product_card-sm__bottom {
       margin-bottom: 6px;
+      @media screen and (max-width: 500px) and (min-width: 440px) {
+        margin-bottom: 25px;
+      }
     }
   }
 
@@ -36,7 +39,6 @@
     font-weight: 600;
     text-align: center;
     text-decoration: underline;
-          //transition: $ease-main;
 
     &:hover {
       color: $red;
@@ -149,7 +151,13 @@
       height: 100%;
       object-fit: cover;
     }
+    @media screen and (max-width: 500px) and (min-width: 440px) {
+      height: 209px;
+      min-height: 209px;
+    }
   }
+
+
 }
 
 /* product_card */

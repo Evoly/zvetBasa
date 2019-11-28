@@ -127,14 +127,34 @@
                                 <li class="navbar-dropdown__item"><a class="navbar-dropdown__link" href="#">Очерeдной пункт меню</a></li>
                             </ul>
                         </li>
-                        <li class="navbar__search hidden-sm-down"><a class="navbar__search-icon" href=""><span class="icon_custom lens"></span></a></li>
+                        <li class="navbar__search hidden-sm-down">
+                            <div class="search-form search-form_lg">
+                                <div class="navbar__search-icon js-search"><span class="icon_custom lens"></span></div>
+                                <div class="search-form__hidden">
+                                    <input class="form-control -default-" value="" type="text" name="name" autocomplete="off" placeholder=" Поиск по сайту" />
+                                    <button class="search-form__btn-search" type="submit"><span class="icon_custom lens"></span></button>
+                                    <button class="search-form__btn-close js-closeInput" type="submit"><span>&#x2715;</span></button>
+                                </div>
+                            </div>
+                        </li>
                         <li class="navbar__cart hidden-sm-down"><a class="navbar__cart-icon" href=""><span class="icon-block"><span class="icon_custom cart"></span><span class="counter">0</span></span><span class="hidden-md-down">В вашей корзине пока пусто</span></a></li>
                     </ul>
                 </div>
             </nav>
             <div class="mobile-menu">
                 <button class="navbar-toggler btn-open" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarnavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="btn-open__icon"></span></button><a class="logo" href="#"><img src="img/logo.png" /></a>
-                <div class="mobile-menu__icons"><a class="mobile-menu__icon" href="#"><span class="icon_custom lens"></span></a><a class="mobile-menu__icon" href="#"><span class="icon_custom cart"></span></a><a class="mobile-menu__icon" href="#"><span class="icon_custom phone-call"></span></a></div>
+                <div class="mobile-menu__icons">
+                    <div class="mobile-menu__icon">
+                        <div class="search-form search-form_sm">
+                            <div class="js-search"><span class="icon_custom lens"></span></div>
+                            <div class="search-form__hidden">
+                                <input class="form-control -default-" value="" type="text" name="name" autocomplete="off" placeholder=" Поиск по сайту" />
+                                <button class="search-form__btn-search" type="submit"><span class="icon_custom lens"></span></button>
+                                <button class="search-form__btn-close js-closeInput" type="submit"><span>&#x2715;</span></button>
+                            </div>
+                        </div>
+                    </div><a class="mobile-menu__icon" href="#"><span class="icon_custom cart"></span></a><a class="mobile-menu__icon" href="#"><span class="icon_custom phone-call"></span></a>
+                </div>
             </div>
         </div>
     </header>

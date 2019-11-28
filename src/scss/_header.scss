@@ -1,5 +1,5 @@
-@import './__my__vars.scss';
-/* header */
+@import './__my__vars.scss'; /* header */
+
 .header {
   &_wrapper_global {
     flex: 0 0 auto;
@@ -239,6 +239,7 @@
 }
 
 .navbar {
+  height: 52px;
   padding: 0;
   background: linear-gradient(180deg, #73B640 0%, #448513 100%);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
@@ -265,7 +266,7 @@
     flex-basis: 100%;
     flex-direction: row nowrap;
     align-items: center;
-    height: 52px;
+    height: 100%;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -275,17 +276,18 @@
       width: 0;
       max-width: 250px;
       height: 100%;
-      padding: 15px 10px;
+      padding-top: 15px;
+      padding-bottom: 15px;
       transition-delay: 2s;
-      transition:  3s ease-out;
+      transition: 3s ease-out;
     }
   }
 
   &__item {
+    position: relative;
     flex-grow: 1;
     height: 100%;
     color: #fff;
-    position: relative;
     @include media-breakpoint-down(sm) {
       color: $green_hover_1;
       flex: 0 0 0;
@@ -319,13 +321,7 @@
         text-decoration: none;
       }
       @include media-breakpoint-down(sm) {
-        background: inherit;
-      }
-    }
-
-    &:first-child {
-      @include media-breakpoint-down(sm) {
-        background: inherit;
+        background: $dropdown-link-active-bg;
       }
     }
 
@@ -364,9 +360,7 @@
     }
     @include media-breakpoint-down(sm) {
       text-align: left;
-      padding-top: 8px;
-      padding-bottom: 8px;
-      padding-left: 0;
+      padding: 8px 10px;
     }
 
     .icon_custom {
@@ -493,9 +487,11 @@
   @include media-breakpoint-up(md) {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
   }
-
   @include media-breakpoint-down(sm) {
     position: relative;
+  }
+  @include media-breakpoint-down(sm) {
+    width: 100%;
   }
 
   &__link {
@@ -527,12 +523,15 @@
   position: absolute;
   top: 10px;
   right: 45px;
+  border: none;
+  background-color: transparent;
+
   &__icon {
     position: absolute;
-    transition: .3s $ease-main;
+    transition: 0.3s $ease-main;
 
-    &:before,
-    &:after {
+    &:after,
+    &:before {
       position: absolute;
       left: 12px;
       content: ' ';
@@ -544,24 +543,27 @@
     &:before {
       transform: rotate(45deg);
     }
+
     &:after {
       transform: rotate(-45deg);
     }
   }
 
   &:hover {
-    opacity: .7;
+    opacity: 0.7;
   }
 }
 
-
-
 .btn-open {
   position: relative;
-  padding-right: 5px;
+  margin-right: 5px;
+  width: 25px;
+  height: 25px;
+  border: none;
+  background-color: transparent;
 
   &:hover {
-    opacity: .7;
+    opacity: 0.7;
     transition: $ease-main;
   }
 
@@ -604,6 +606,8 @@
   justify-content: space-between;
   @include media-breakpoint-down(sm) {
     display: flex;
+    position: relative;
+    z-index: 1;
   }
 
   &__icons {
@@ -614,16 +618,18 @@
 
   .logo {
     flex-basis: 45%;
+    padding-right: 10px;
+    box-sizing: content-box;
   }
 
   &__icon {
     display: block;
-    padding-left: 20px;
+    padding-left: 25px;
 
     &:hover {
       text-decoration: none;
-      opacity: .7;
-      transition: $ease-main;
+      //opacity: .7;
+      //transition: $ease-main;
     }
 
     .icon_custom {
@@ -635,22 +641,129 @@
     }
   }
 }
+
+.search-form {
+  height: 100%;
+  font-size: 20px;
+
+  &_lg {
+    color: #fff;
+
+    &.is-show {
+      background-image: linear-gradient(180deg, #65A732 0%, #3F7D0F 100%);
+    }
+
+    .form-control {
+      &::placeholder {
+        color: rgba(#fff, .5);
+      }
+    }
+  }
+
+  &_sm {
+    background-color: #fff;
+    color: #000;
+
+    &.is-show {
+      border-bottom: 3px solid $link-color;
+    }
+
+    .search-form__btn-close {
+      color: $green_5;
+    }
+  }
+
+  &.is-show {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+
+    .search-form__hidden {
+      display: block;
+    }
+  }
+
+  &__hidden {
+    display: none;
+    height: 100%;
+  }
+
+  &__btn-search {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    right: 35px;
+    border: none;
+    background-color: transparent;
+
+    &:hover {
+      opacity: .7;
+      transition: $ease-main;
+    }
+  }
+
+  &__btn-close {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 24px;
+    height: 24px;
+    color: inherit;
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    line-height: 18px;
+
+    &:hover {
+      opacity: .7;
+      transition: $ease-main;
+    }
+  }
+
+  .lens {
+    cursor: pointer;
+  }
+
+  .form-control {
+    height: 100%;
+    border-radius: 0;
+    background-color: transparent;
+    color: inherit;
+    font-size: 14px;
+    padding-right: 70px;
+
+    &:focus {
+      border: none;
+    }
+
+    &::placeholder {
+      font-size: 14px;
+    }
+  }
+}
 /* header */
-
-
 @include media-breakpoint-down(sm) {
   .navbar-collapse {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
+
   .navbar-collapse.collapsing {
-      height: auto;
-      left: -100%;
+    height: auto;
+    left: -100%;
   }
+
   .navbar-collapse.show {
-      left: 0;
-      transition: left 0.3s ease-in;
+    left: 0;
+    transition: left 0.3s ease-in;
   }
 }
