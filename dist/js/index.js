@@ -206,12 +206,12 @@
           slidesToShow: 3
         }
       }, {
-        breakpoint: 768,
+        breakpoint: 630,
         settings: {
           slidesToShow: 2
         }
       }, {
-        breakpoint: 460,
+        breakpoint: 450,
         settings: {
           slidesToShow: 1
         }
